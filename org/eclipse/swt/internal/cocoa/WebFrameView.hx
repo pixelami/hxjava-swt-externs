@@ -1,0 +1,14 @@
+package org.eclipse.swt.internal.cocoa;
+
+import java.StdTypes;
+@:native("org.eclipse.swt.internal.cocoa.WebFrameView")
+extern class WebFrameView extends org.eclipse.swt.internal.cocoa.NSObject 
+{
+	@:overload(function ():Void {})
+	@:overload(function (id:haxe.Int64):Void {})
+	public function new(id:org.eclipse.swt.internal.cocoa.Id):Void;
+	public function printOperationWithPrintInfo(printInfo:org.eclipse.swt.internal.cocoa.NSPrintInfo):org.eclipse.swt.internal.cocoa.NSPrintOperation;
+	public function documentViewShouldHandlePrint():Bool;
+	public function printDocumentView():Void;
+
+}

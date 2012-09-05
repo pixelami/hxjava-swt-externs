@@ -1,0 +1,77 @@
+package org.eclipse.swt.internal.mozilla;
+
+import java.StdTypes;
+@:native("org.eclipse.swt.internal.mozilla.nsIDocShell")
+extern class NsIDocShell extends org.eclipse.swt.internal.mozilla.NsISupports 
+{
+	inline static public var NS_IDOCSHELL_IID_STR:String = "69e5de00-7b8b-11d3-af61-00a024ffc08c";
+	static public var NS_IDOCSHELL_IID:org.eclipse.swt.internal.mozilla.NsID;
+	inline static public var NS_IDOCSHELL_1_8_IID_STR:String = "9f0c7461-b9a4-47f6-b88c-421dce1bce66";
+	static public var NS_IDOCSHELL_1_8_IID:org.eclipse.swt.internal.mozilla.NsID;
+	inline static public var NS_IDOCSHELL_10_IID_STR:String = "0666adf8-8738-4ca7-a917-0348f47d2f40";
+	static public var NS_IDOCSHELL_10_IID:org.eclipse.swt.internal.mozilla.NsID;
+	inline static public var ENUMERATE_FORWARDS:Int = 0;
+	inline static public var ENUMERATE_BACKWARDS:Int = 1;
+	inline static public var APP_TYPE_UNKNOWN:Int = 0;
+	inline static public var APP_TYPE_MAIL:Int = 1;
+	inline static public var BUSY_FLAGS_NONE:Int = 0;
+	inline static public var BUSY_FLAGS_BUSY:Int = 1;
+	inline static public var BUSY_FLAGS_BEFORE_PAGE_LOAD:Int = 2;
+	inline static public var BUSY_FLAGS_PAGE_LOADING:Int = 4;
+	inline static public var LOAD_CMD_NORMAL:Int = 1;
+	inline static public var LOAD_CMD_RELOAD:Int = 2;
+	inline static public var LOAD_CMD_HISTORY:Int = 4;
+	public function new(address:haxe.Int64):Void;
+	public function CreateLoadInfo(loadInfo:java.NativeArray<haxe.Int64>):Int;
+	public function SetParentURIContentListener(aParentURIContentListener:haxe.Int64):Int;
+	public function SetCanvasHasFocus(aCanvasHasFocus:Int):Int;
+	public function GetLoadType(aLoadType:java.NativeArray<Int>):Int;
+	public function GetParentURIContentListener(aParentURIContentListener:java.NativeArray<haxe.Int64>):Int;
+	public function GetIsExecutingOnLoadHandler(aIsExecutingOnLoadHandler:java.NativeArray<Int>):Int;
+	public function GetShouldSaveLayoutState(aShouldSaveLayoutState:java.NativeArray<Int>):Int;
+	public function SetZoom(aZoom:Float):Int;
+	public function GetZoom(aZoom:java.NativeArray<Float>):Int;
+	public function SetAllowJavascript(aAllowJavascript:Int):Int;
+	public function GetPresShell(aPresShell:java.NativeArray<haxe.Int64>):Int;
+	public function SetLayoutHistoryState(aLayoutHistoryState:haxe.Int64):Int;
+	public function SetCurrentURI(aURI:haxe.Int64):Int;
+	public function GetDocShellEnumerator(aItemType:Int,aDirection:Int,_retval:java.NativeArray<haxe.Int64>):Int;
+	public function SetLoadType(aLoadType:Int):Int;
+	public function GetLayoutHistoryState(aLayoutHistoryState:java.NativeArray<haxe.Int64>):Int;
+	public function FireUnloadNotification():Int;
+	public function InternalLoad(aURI:haxe.Int64,aReferrer:haxe.Int64,aOwner:haxe.Int64,aInheritOwner:Int,aWindowTarget:java.NativeArray<Char16>,aPostDataStream:haxe.Int64,aHeadersStream:haxe.Int64,aLoadFlags:Int,aSHEntry:haxe.Int64,firstParty:Int,aDocShell:java.NativeArray<haxe.Int64>,aRequest:java.NativeArray<haxe.Int64>):Int;
+	public function GetEldestPresShell(aEldestPresShell:java.NativeArray<haxe.Int64>):Int;
+	public function TabToTreeOwner(forward:Int,tookFocus:java.NativeArray<Int>):Int;
+	public function SetChromeEventHandler(aChromeEventHandler:haxe.Int64):Int;
+	public function SetAllowSubframes(aAllowSubframes:Int):Int;
+	public function GetDocumentCharsetInfo(aDocumentCharsetInfo:java.NativeArray<haxe.Int64>):Int;
+	public function SetAppType(aAppType:Int):Int;
+	public function SetAllowImages(aAllowImages:Int):Int;
+	public function GetHasFocus(aHasFocus:java.NativeArray<Int>):Int;
+	public function GetAllowImages(aAllowImages:java.NativeArray<Int>):Int;
+	public function GetAllowJavascript(aAllowJavascript:java.NativeArray<Int>):Int;
+	public function LoadURI(uri:haxe.Int64,loadInfo:haxe.Int64,aLoadFlags:Int,firstParty:Int):Int;
+	public function GetAllowPlugins(aAllowPlugins:java.NativeArray<Int>):Int;
+	public function GetAllowMetaRedirects(aAllowMetaRedirects:java.NativeArray<Int>):Int;
+	public function GetContentViewer(aContentViewer:java.NativeArray<haxe.Int64>):Int;
+	public function GetPresContext(aPresContext:java.NativeArray<haxe.Int64>):Int;
+	public function GetAllowSubframes(aAllowSubframes:java.NativeArray<Int>):Int;
+	public function GetChromeEventHandler(aChromeEventHandler:java.NativeArray<haxe.Int64>):Int;
+	public function SetAllowAuth(aAllowAuth:Int):Int;
+	public function SetMarginWidth(aMarginWidth:Int):Int;
+	public function SetAllowMetaRedirects(aAllowMetaRedirects:Int):Int;
+	public function SetHasFocus(aHasFocus:Int):Int;
+	public function GetCanvasHasFocus(aCanvasHasFocus:java.NativeArray<Int>):Int;
+	public function IsBeingDestroyed(_retval:java.NativeArray<Int>):Int;
+	public function GetMarginWidth(aMarginWidth:java.NativeArray<Int>):Int;
+	public function GetAllowAuth(aAllowAuth:java.NativeArray<Int>):Int;
+	public function PrepareForNewContentModel():Int;
+	public function GetMarginHeight(aMarginHeight:java.NativeArray<Int>):Int;
+	public function LoadStream(aStream:haxe.Int64,aURI:haxe.Int64,aContentType:haxe.Int64,aContentCharset:haxe.Int64,aLoadInfo:haxe.Int64):Int;
+	public function SetMarginHeight(aMarginHeight:Int):Int;
+	public function SetAllowPlugins(aAllowPlugins:Int):Int;
+	public function GetBusyFlags(aBusyFlags:java.NativeArray<Int>):Int;
+	public function SetDocumentCharsetInfo(aDocumentCharsetInfo:haxe.Int64):Int;
+	public function GetAppType(aAppType:java.NativeArray<Int>):Int;
+
+}
