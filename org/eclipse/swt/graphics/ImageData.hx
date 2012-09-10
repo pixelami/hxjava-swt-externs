@@ -430,7 +430,6 @@ extern class ImageData implements org.eclipse.swt.internal.CloneableCompatibilit
  *        (For higher depths, use the int[] version of this method.)</li>
  * </ul>
  */
-	@:overload(function (x:Int,y:Int,putWidth:Int,pixels:java.NativeArray<Int8>,startIndex:Int):Void {})
 /**
  * Sets the pixel values starting at offset <code>x</code> in
  * scanline <code>y</code> in the receiver's data to the
@@ -454,6 +453,7 @@ extern class ImageData implements org.eclipse.swt.internal.CloneableCompatibilit
  * </ul>
  */
 	public function setPixels(x:Int,y:Int,putWidth:Int,pixels:java.NativeArray<Int>,startIndex:Int):Void;
+	@:overload(function (x:Int,y:Int,putWidth:Int,pixels:java.NativeArray<Int8>,startIndex:Int):Void {})
 /**
  * Sets the alpha value at offset <code>x</code> in
  * scanline <code>y</code> in the receiver's alpha data.
@@ -491,7 +491,6 @@ extern class ImageData implements org.eclipse.swt.internal.CloneableCompatibilit
  *        (For higher depths, use the int[] version of this method.)</li>
  * </ul>
  */
-	@:overload(function (x:Int,y:Int,getWidth:Int,pixels:java.NativeArray<Int8>,startIndex:Int):Void {})
 /**
  * Returns <code>getWidth</code> pixel values starting at offset
  * <code>x</code> in scanline <code>y</code> in the receiver's
@@ -514,6 +513,7 @@ extern class ImageData implements org.eclipse.swt.internal.CloneableCompatibilit
  * </ul>
  */
 	public function getPixels(x:Int,y:Int,getWidth:Int,pixels:java.NativeArray<Int>,startIndex:Int):Void;
+	@:overload(function (x:Int,y:Int,getWidth:Int,pixels:java.NativeArray<Int8>,startIndex:Int):Void {})
 /**
  * Sets the alpha values starting at offset <code>x</code> in
  * scanline <code>y</code> in the receiver's alpha data to the

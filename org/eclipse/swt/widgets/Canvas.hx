@@ -135,8 +135,7 @@ extern class Canvas extends org.eclipse.swt.widgets.Composite
  * 
  * @since 3.2
  */
-	@:overload( function (gc:org.eclipse.swt.graphics.GC,x:Int,y:Int,width:Int,height:Int):Void {} )
-    override public function drawBackground(gc:org.eclipse.swt.graphics.GC,x:Int,y:Int,width:Int,height:Int,offsetX:Int,offsetY:Int):Void;
+	public function drawBackground(gc:org.eclipse.swt.graphics.GC,x:Int,y:Int,width:Int,height:Int):Void;
 /**
  * Returns the IME.
  *

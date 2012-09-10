@@ -176,7 +176,6 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * @since 2.0
  * 
  */
-	@:overload(function ():org.eclipse.swt.graphics.Color {})
 /**
  * 
  * Returns the foreground color at the given column index in the receiver.
@@ -192,6 +191,7 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * @since 3.1
  */
 	public function getForeground(index:Int):org.eclipse.swt.graphics.Color;
+	@:overload(function ():org.eclipse.swt.graphics.Color {})
 /**
  * Returns <code>true</code> if the receiver is expanded,
  * and false otherwise.
@@ -261,8 +261,6 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * 
  * @since 3.1
  */
-	@:overload(function (strings:java.NativeArray<String>):Void {})
-	@:overload(function (string:String):Void {})
 /**
  * Sets the receiver's text at a column
  *
@@ -279,7 +277,9 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * 
  * @since 3.1
  */
-	public function setText(index:Int,string:String):Void;
+	//override public function setText(string:String):Void;
+	@:overload(function (strings:java.NativeArray<String>):Void {})
+	@:overload(function (string:String):Void {})
 /**
  * Sets the checked state of the receiver.
  * <p>
@@ -330,7 +330,6 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * @since 3.2
  */
 	public function clear(index:Int,all:Bool):Void;
-	@:overload(function ():String {})
 /**
  * Returns the text stored at the given column index in the receiver,
  * or empty string if the text has not been set.
@@ -345,7 +344,8 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * 
  * @since 3.1
  */
-	public function getText(index:Int):String;
+	//override public function getText():String;
+	@:overload(function ():String {})
 /**
  * Returns the item at the given, zero-relative index in the
  * receiver. Throws an exception if the index is out of range.
@@ -376,7 +376,6 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  *
  * @since 3.0
  */
-	@:overload(function ():org.eclipse.swt.graphics.Font {})
 /**
  * Returns the font that the receiver will use to paint textual information
  * for the specified cell in this item.
@@ -392,6 +391,7 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * @since 3.1
  */
 	public function getFont(index:Int):org.eclipse.swt.graphics.Font;
+	@:overload(function ():org.eclipse.swt.graphics.Font {})
 /**
  * Sets the grayed state of the checkbox for this item.  This state change 
  * only applies if the Tree was created with the SWT.CHECK style.
@@ -415,7 +415,6 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function ():org.eclipse.swt.graphics.Rectangle {})
 /**
  * Returns a rectangle describing the receiver's size and location
  * relative to its parent at a column in the tree.
@@ -431,6 +430,7 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * @since 3.1
  */
 	public function getBounds(index:Int):org.eclipse.swt.graphics.Rectangle;
+	@:overload(function ():org.eclipse.swt.graphics.Rectangle {})
 /**
  * Sets the receiver's background color to the color specified
  * by the argument, or to the default system color for the item
@@ -449,7 +449,6 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * @since 2.0
  * 
  */
-	@:overload(function (color:org.eclipse.swt.graphics.Color):Void {})
 /**
  * Sets the background color at the given column index in the receiver 
  * to the color specified by the argument, or to the default system color for the item
@@ -470,6 +469,7 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * 
  */
 	public function setBackground(index:Int,color:org.eclipse.swt.graphics.Color):Void;
+	@:overload(function (color:org.eclipse.swt.graphics.Color):Void {})
 /**
  * Returns <code>true</code> if the receiver is checked,
  * and false otherwise.  When the parent does not have
@@ -513,7 +513,6 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * @since 2.0
  * 
  */
-	@:overload(function ():org.eclipse.swt.graphics.Color {})
 /**
  * Returns the background color at the given column index in the receiver.
  *
@@ -528,6 +527,7 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * @since 3.1
  */
 	public function getBackground(index:Int):org.eclipse.swt.graphics.Color;
+	@:overload(function ():org.eclipse.swt.graphics.Color {})
 /**
  * Removes all of the items from the receiver.
  * <p>
@@ -555,8 +555,6 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * 
  * @since 3.1
  */
-	@:overload(function (images:java.NativeArray<org.eclipse.swt.graphics.Image>):Void {})
-	@:overload(function (image:org.eclipse.swt.graphics.Image):Void {})
 /**
  * Sets the receiver's image at a column.
  *
@@ -573,7 +571,9 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * 
  * @since 3.1
  */
-	public function setImage(index:Int,image:org.eclipse.swt.graphics.Image):Void;
+	//override public function setImage(image:org.eclipse.swt.graphics.Image):Void;
+	@:overload(function (images:java.NativeArray<org.eclipse.swt.graphics.Image>):Void {})
+	@:overload(function (image:org.eclipse.swt.graphics.Image):Void {})
 /**
  * Returns the receiver's parent item, which must be a
  * <code>TreeItem</code> or null when the receiver is a
@@ -628,7 +628,6 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * 
  * @since 3.0
  */
-	@:overload(function (font:org.eclipse.swt.graphics.Font):Void {})
 /**
  * Sets the font that the receiver will use to paint textual information
  * for the specified cell in this item to the font specified by the 
@@ -649,6 +648,7 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * @since 3.1
  */
 	public function setFont(index:Int,font:org.eclipse.swt.graphics.Font):Void;
+	@:overload(function (font:org.eclipse.swt.graphics.Font):Void {})
 /**
  * Returns the number of items contained in the receiver
  * that are direct item children of the receiver.
@@ -679,7 +679,6 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * @since 2.0
  * 
  */
-	@:overload(function (color:org.eclipse.swt.graphics.Color):Void {})
 /**
  * Sets the foreground color at the given column index in the receiver 
  * to the color specified by the argument, or to the default system color for the item
@@ -700,6 +699,7 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * 
  */
 	public function setForeground(index:Int,color:org.eclipse.swt.graphics.Color):Void;
+	@:overload(function (color:org.eclipse.swt.graphics.Color):Void {})
 	override private function checkSubclass():Void;
 /**
  * Returns a rectangle describing the size and location
@@ -746,7 +746,6 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * </ul>
  */
 	public function setExpanded(expanded:Bool):Void;
-	@:overload(function ():org.eclipse.swt.graphics.Image {})
 /**
  * Returns the image stored at the given column index in the receiver,
  * or null if the image has not been set or if the column does not exist.
@@ -761,6 +760,7 @@ extern class TreeItem extends org.eclipse.swt.widgets.Item
  * 
  * @since 3.1
  */
-	public function getImage(index:Int):org.eclipse.swt.graphics.Image;
+	//override public function getImage():org.eclipse.swt.graphics.Image;
+	@:overload(function ():org.eclipse.swt.graphics.Image {})
 
 }

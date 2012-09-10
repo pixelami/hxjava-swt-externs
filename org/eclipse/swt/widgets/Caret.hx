@@ -80,7 +80,6 @@ extern class Caret extends org.eclipse.swt.widgets.Widget
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (size:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Sets the receiver's size to the point specified by the arguments.
  *
@@ -93,6 +92,7 @@ extern class Caret extends org.eclipse.swt.widgets.Widget
  * </ul>
  */
 	public function setSize(width:Int,height:Int):Void;
+	@:overload(function (size:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Returns the receiver's parent, which must be a <code>Canvas</code>.
  *
@@ -150,7 +150,6 @@ extern class Caret extends org.eclipse.swt.widgets.Widget
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
 /**
  * Sets the receiver's size and location to the rectangular
  * area specified by the arguments. The <code>x</code> and 
@@ -168,6 +167,7 @@ extern class Caret extends org.eclipse.swt.widgets.Widget
  * </ul>
  */
 	public function setBounds(x:Int,y:Int,width:Int,height:Int):Void;
+	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
 /**
  * Returns a point describing the receiver's location relative
  * to its parent (or its display if its parent is null).
@@ -192,7 +192,6 @@ extern class Caret extends org.eclipse.swt.widgets.Widget
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (location:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Sets the receiver's location to the point specified by
  * the arguments which are relative to the receiver's
@@ -207,6 +206,7 @@ extern class Caret extends org.eclipse.swt.widgets.Widget
  * </ul>
  */
 	public function setLocation(x:Int,y:Int):Void;
+	@:overload(function (location:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Returns <code>true</code> if the receiver is visible, and
  * <code>false</code> otherwise.

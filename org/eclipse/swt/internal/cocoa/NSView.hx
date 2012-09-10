@@ -18,8 +18,8 @@ extern class NSView extends org.eclipse.swt.internal.cocoa.NSResponder
 	public function convertSizeToBase(aSize:org.eclipse.swt.internal.cocoa.NSSize):org.eclipse.swt.internal.cocoa.NSSize;
 	public function lockFocus():Void;
 	public function displayRectIgnoringOpacity(aRect:org.eclipse.swt.internal.cocoa.NSRect,context:org.eclipse.swt.internal.cocoa.NSGraphicsContext):Void;
-	@:overload(function (aView:org.eclipse.swt.internal.cocoa.NSView):Void {})
 	public function addSubview(aView:org.eclipse.swt.internal.cocoa.NSView,place:haxe.Int64,otherView:org.eclipse.swt.internal.cocoa.NSView):Void;
+	@:overload(function (aView:org.eclipse.swt.internal.cocoa.NSView):Void {})
 	public function isFlipped():Bool;
 	public function convertPoint_toView_(aPoint:org.eclipse.swt.internal.cocoa.NSPoint,aView:org.eclipse.swt.internal.cocoa.NSView):org.eclipse.swt.internal.cocoa.NSPoint;
 	public function setAcceptsTouchEvents(flag:Bool):Void;

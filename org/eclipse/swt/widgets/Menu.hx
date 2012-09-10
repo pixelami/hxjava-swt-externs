@@ -399,7 +399,6 @@ extern class Menu extends org.eclipse.swt.widgets.Widget
  * 
  * @since 2.1
  */
-	@:overload(function (location:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Sets the location of the receiver, which must be a popup,
  * to the point specified by the arguments which are relative
@@ -421,6 +420,7 @@ extern class Menu extends org.eclipse.swt.widgets.Widget
  * </ul>
  */
 	public function setLocation(x:Int,y:Int):Void;
+	@:overload(function (location:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Returns <code>true</code> if the receiver is visible, and
  * <code>false</code> otherwise.

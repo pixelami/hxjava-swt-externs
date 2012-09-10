@@ -12,8 +12,8 @@ extern class NSBitmapImageRep extends org.eclipse.swt.internal.cocoa.NSImageRep
 	public function bitmapFormat():haxe.Int64;
 	public function bytesPerRow():haxe.Int64;
 	public function bytesPerPlane():haxe.Int64;
-	@:overload(function (planes:haxe.Int64,width:haxe.Int64,height:haxe.Int64,bps:haxe.Int64,spp:haxe.Int64,alpha:Bool,isPlanar:Bool,colorSpaceName:org.eclipse.swt.internal.cocoa.NSString,rBytes:haxe.Int64,pBits:haxe.Int64):org.eclipse.swt.internal.cocoa.NSBitmapImageRep {})
 	public function initWithBitmapDataPlanes(planes:haxe.Int64,width:haxe.Int64,height:haxe.Int64,bps:haxe.Int64,spp:haxe.Int64,alpha:Bool,isPlanar:Bool,colorSpaceName:org.eclipse.swt.internal.cocoa.NSString,bitmapFormat:haxe.Int64,rBytes:haxe.Int64,pBits:haxe.Int64):org.eclipse.swt.internal.cocoa.NSBitmapImageRep;
+	@:overload(function (planes:haxe.Int64,width:haxe.Int64,height:haxe.Int64,bps:haxe.Int64,spp:haxe.Int64,alpha:Bool,isPlanar:Bool,colorSpaceName:org.eclipse.swt.internal.cocoa.NSString,rBytes:haxe.Int64,pBits:haxe.Int64):org.eclipse.swt.internal.cocoa.NSBitmapImageRep {})
 	public function samplesPerPixel():haxe.Int64;
 	static public function imageRepWithData(data:org.eclipse.swt.internal.cocoa.NSData):org.eclipse.swt.internal.cocoa.Id;
 	public function getBitmapDataPlanes(data:java.NativeArray<haxe.Int64>):Void;

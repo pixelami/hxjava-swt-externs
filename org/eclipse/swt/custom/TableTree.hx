@@ -179,7 +179,6 @@ extern class TableTree extends org.eclipse.swt.widgets.Composite
  * 
  * @since 3.1
  */
-	@:overload(function (index:Int):org.eclipse.swt.custom.TableTreeItem {})
 /**
  * Returns the item at the given point in the receiver
  * or null if no such item exists. The point is in the
@@ -197,6 +196,7 @@ extern class TableTree extends org.eclipse.swt.widgets.Composite
  * </ul>
  */
 	public function getItem(point:org.eclipse.swt.graphics.Point):org.eclipse.swt.custom.TableTreeItem;
+	@:overload(function (index:Int):org.eclipse.swt.custom.TableTreeItem {})
 	override public function setBackground(color:org.eclipse.swt.graphics.Color):Void;
 	override public function setEnabled(enabled:Bool):Void;
 	override public function getBackground():org.eclipse.swt.graphics.Color;

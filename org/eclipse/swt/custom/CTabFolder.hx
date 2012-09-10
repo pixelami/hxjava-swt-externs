@@ -224,7 +224,6 @@ extern class CTabFolder extends org.eclipse.swt.widgets.Composite
  * @since 3.0
  */
 	public function getBorderVisible():Bool;
-	@:overload(function (color:org.eclipse.swt.graphics.Color):Void {})
 /**
  * Specify a gradient of colors to be drawn in the background of the unselected tabs.
  * For example to draw a gradient that varies from dark blue to blue and then to
@@ -252,7 +251,6 @@ extern class CTabFolder extends org.eclipse.swt.widgets.Composite
  *
  * @since 3.6
  */
-	@:overload(function (colors:java.NativeArray<org.eclipse.swt.graphics.Color>,percents:java.NativeArray<Int>):Void {})
 /**
  * Specify a gradient of colors to be drawn in the background of the unselected tab.
  * For example to draw a vertical gradient that varies from dark blue to blue and then to
@@ -282,7 +280,9 @@ extern class CTabFolder extends org.eclipse.swt.widgets.Composite
  *
  * @since 3.6
  */
-	public function setBackground(colors:java.NativeArray<org.eclipse.swt.graphics.Color>,percents:java.NativeArray<Int>,vertical:Bool):Void;
+	//override public function setBackground(color:org.eclipse.swt.graphics.Color):Void;
+	@:overload(function (color:org.eclipse.swt.graphics.Color):Void {})
+	@:overload(function (colors:java.NativeArray<org.eclipse.swt.graphics.Color>,percents:java.NativeArray<Int>):Void {})
 /**
  * Specify a fixed height for the tab items.  If no height is specified,
  * the default height is the height of the text or the image, whichever 
@@ -499,7 +499,6 @@ extern class CTabFolder extends org.eclipse.swt.widgets.Composite
  *
  * @since 3.0
  */
-	@:overload(function (color:org.eclipse.swt.graphics.Color):Void {})
 /**
  * Set the image to be drawn in the background of the selected tab.  Image
  * is stretched or compressed to cover entire selection tab area.
@@ -511,7 +510,6 @@ extern class CTabFolder extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (image:org.eclipse.swt.graphics.Image):Void {})
 /**
  * Specify a gradient of colours to be draw in the background of the selected tab.
  * For example to draw a gradient that varies from dark blue to blue and then to
@@ -537,7 +535,6 @@ extern class CTabFolder extends org.eclipse.swt.widgets.Composite
  *		<li>ERROR_WIDGET_DISPOSED when the widget has been disposed</li>
  *	</ul>
  */
-	@:overload(function (colors:java.NativeArray<org.eclipse.swt.graphics.Color>,percents:java.NativeArray<Int>):Void {})
 /**
  * Specify a gradient of colours to be draw in the background of the selected tab.
  * For example to draw a vertical gradient that varies from dark blue to blue and then to
@@ -568,6 +565,9 @@ extern class CTabFolder extends org.eclipse.swt.widgets.Composite
  * @since 3.0
  */
 	public function setSelectionBackground(colors:java.NativeArray<org.eclipse.swt.graphics.Color>,percents:java.NativeArray<Int>,vertical:Bool):Void;
+	@:overload(function (color:org.eclipse.swt.graphics.Color):Void {})
+	@:overload(function (image:org.eclipse.swt.graphics.Image):Void {})
+	@:overload(function (colors:java.NativeArray<org.eclipse.swt.graphics.Color>,percents:java.NativeArray<Int>):Void {})
 	override public function getClientArea():org.eclipse.swt.graphics.Rectangle;
 /**
  * Returns <code>true</code> if the CTabFolder is rendered
@@ -588,7 +588,6 @@ extern class CTabFolder extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (index:Int):Void {})
 /**
  * Set the selection to the tab at the specified item.
  * 
@@ -604,6 +603,7 @@ extern class CTabFolder extends org.eclipse.swt.widgets.Composite
  * </ul>
  */
 	public function setSelection(item:org.eclipse.swt.custom.CTabItem):Void;
+	@:overload(function (index:Int):Void {})
 /**
  * Sets the layout which is associated with the receiver to be
  * the argument which may be null.
@@ -700,7 +700,6 @@ extern class CTabFolder extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_WIDGET_DISPOSED when the widget has been disposed</li>
  * </ul>
  */
-	@:overload(function (index:Int):org.eclipse.swt.custom.CTabItem {})
 /**
  * Gets the item at a point in the widget.
  *
@@ -713,6 +712,7 @@ extern class CTabFolder extends org.eclipse.swt.widgets.Composite
  *	</ul>
  */
 	public function getItem(pt:org.eclipse.swt.graphics.Point):org.eclipse.swt.custom.CTabItem;
+	@:overload(function (index:Int):org.eclipse.swt.custom.CTabItem {})
 /**
  *
  * Returns the number of characters that will
@@ -782,7 +782,6 @@ extern class CTabFolder extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (index:Int,after:Bool):Void {})
 /**
  * Display an insert marker before or after the specified tab item. 
  * 
@@ -798,6 +797,7 @@ extern class CTabFolder extends org.eclipse.swt.widgets.Composite
  * </ul>
  */
 	public function setInsertMark(item:org.eclipse.swt.custom.CTabItem,after:Bool):Void;
+	@:overload(function (index:Int,after:Bool):Void {})
 /**
  * Set the control that appears in the top right corner of the tab folder.
  * Typically this is a close button or a composite with a Menu and close button. 
@@ -814,7 +814,6 @@ extern class CTabFolder extends org.eclipse.swt.widgets.Composite
  * 
  * @since 2.1
  */
-	@:overload(function (control:org.eclipse.swt.widgets.Control):Void {})
 /**
  * Set the control that appears in the top right corner of the tab folder.
  * Typically this is a close button or a composite with a Menu and close button. 
@@ -842,6 +841,7 @@ extern class CTabFolder extends org.eclipse.swt.widgets.Composite
  * @since 3.0
  */
 	public function setTopRight(control:org.eclipse.swt.widgets.Control,alignment:Int):Void;
+	@:overload(function (control:org.eclipse.swt.widgets.Control):Void {})
 	override public function setBackgroundImage(image:org.eclipse.swt.graphics.Image):Void;
 /**
  * Toggle the visibility of the border

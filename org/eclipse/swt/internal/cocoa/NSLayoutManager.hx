@@ -19,8 +19,8 @@ extern class NSLayoutManager extends org.eclipse.swt.internal.cocoa.NSObject
 	public function addTextContainer(container:org.eclipse.swt.internal.cocoa.NSTextContainer):Void;
 	public function removeTemporaryAttribute(attrName:org.eclipse.swt.internal.cocoa.NSString,charRange:org.eclipse.swt.internal.cocoa.NSRange):Void;
 	public function addTemporaryAttribute(attrName:org.eclipse.swt.internal.cocoa.NSString,value:org.eclipse.swt.internal.cocoa.Id,charRange:org.eclipse.swt.internal.cocoa.NSRange):Void;
-	@:overload(function (glyphIndex:haxe.Int64,effectiveGlyphRange:haxe.Int64):org.eclipse.swt.internal.cocoa.NSRect {})
 	public function lineFragmentUsedRectForGlyphAtIndex(glyphIndex:haxe.Int64,effectiveGlyphRange:haxe.Int64,flag:Bool):org.eclipse.swt.internal.cocoa.NSRect;
+	@:overload(function (glyphIndex:haxe.Int64,effectiveGlyphRange:haxe.Int64):org.eclipse.swt.internal.cocoa.NSRect {})
 	public function boundingRectForGlyphRange(glyphRange:org.eclipse.swt.internal.cocoa.NSRange,container:org.eclipse.swt.internal.cocoa.NSTextContainer):org.eclipse.swt.internal.cocoa.NSRect;
 	public function defaultLineHeightForFont(theFont:org.eclipse.swt.internal.cocoa.NSFont):Float;
 	public function setTextStorage(textStorage:org.eclipse.swt.internal.cocoa.NSTextStorage):Void;

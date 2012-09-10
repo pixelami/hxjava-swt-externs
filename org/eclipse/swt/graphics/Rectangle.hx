@@ -126,7 +126,6 @@ extern class Rectangle implements org.eclipse.swt.internal.SerializableCompatibi
  * @see #intersection(Rectangle)
  * @see #isEmpty()
  */
-	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Bool {})
 /**
  * Returns <code>true</code> if the rectangle described by the
  * arguments intersects with the receiver and <code>false</code>
@@ -152,6 +151,7 @@ extern class Rectangle implements org.eclipse.swt.internal.SerializableCompatibi
  * @since 3.0
  */
 	public function intersects(x:Int,y:Int,width:Int,height:Int):Bool;
+	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Bool {})
 /**
  * Destructively replaces the x, y, width and height values
  * in the receiver with ones which represent the intersection of the
@@ -196,7 +196,6 @@ extern class Rectangle implements org.eclipse.swt.internal.SerializableCompatibi
  *    <li>ERROR_NULL_ARGUMENT - if the argument is null</li>
  * </ul>
  */
-	@:overload(function (pt:org.eclipse.swt.graphics.Point):Bool {})
 /**
  * Returns <code>true</code> if the point specified by the
  * arguments is inside the area specified by the receiver,
@@ -207,6 +206,7 @@ extern class Rectangle implements org.eclipse.swt.internal.SerializableCompatibi
  * @return <code>true</code> if the rectangle contains the point and <code>false</code> otherwise
  */
 	public function contains(x:Int,y:Int):Bool;
+	@:overload(function (pt:org.eclipse.swt.graphics.Point):Bool {})
 /**
  * Destructively replaces the x, y, width and height values
  * in the receiver with ones which represent the union of the

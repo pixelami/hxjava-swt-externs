@@ -20,7 +20,6 @@ extern class Library
  *
  * @param name the name of the library to load
  */
-	@:overload(function (name:String):Void {})
 /**
  * Loads the shared library that matches the version of the
  * Java code which is currently running.  SWT shared libraries
@@ -34,6 +33,7 @@ extern class Library
  * @param mapName true if the name should be mapped, false otherwise
  */
 	static public function loadLibrary(name:String,mapName:Bool):Void;
+	@:overload(function (name:String):Void {})
 /**
  * Returns the Java version number as an integer.
  * 

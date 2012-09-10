@@ -18,8 +18,8 @@ extern class NSAttributedString extends org.eclipse.swt.internal.cocoa.NSObject
 	public function doubleClickAtIndex(location:haxe.Int64):org.eclipse.swt.internal.cocoa.NSRange;
 	public function length():haxe.Int64;
 	public function nextWordFromIndex(location:haxe.Int64,isForward:Bool):haxe.Int64;
-	@:overload(function (str:org.eclipse.swt.internal.cocoa.NSString):org.eclipse.swt.internal.cocoa.NSAttributedString {})
 	public function initWithString(str:org.eclipse.swt.internal.cocoa.NSString,attrs:org.eclipse.swt.internal.cocoa.NSDictionary):org.eclipse.swt.internal.cocoa.NSAttributedString;
+	@:overload(function (str:org.eclipse.swt.internal.cocoa.NSString):org.eclipse.swt.internal.cocoa.NSAttributedString {})
 	public function attributesAtIndex(location:haxe.Int64,range:haxe.Int64,rangeLimit:org.eclipse.swt.internal.cocoa.NSRange):org.eclipse.swt.internal.cocoa.NSDictionary;
 
 }

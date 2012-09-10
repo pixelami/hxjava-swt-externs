@@ -65,7 +65,6 @@ extern class TreeEditor extends org.eclipse.swt.custom.ControlEditor
  * @param tree the Tree Control above which this editor will be displayed
  */
 	public function new(tree:org.eclipse.swt.widgets.Tree):Void;
-	@:overload(function (editor:org.eclipse.swt.widgets.Control):Void {})
 /**
  * Specify the Control that is to be displayed and the cell in the tree that it is to be positioned above.
  *
@@ -75,7 +74,6 @@ extern class TreeEditor extends org.eclipse.swt.custom.ControlEditor
  * @param editor the Control that is displayed above the cell being edited
  * @param item the TreeItem for the row of the cell being tracked by this editor
  */
-	@:overload(function (editor:org.eclipse.swt.widgets.Control,item:org.eclipse.swt.widgets.TreeItem):Void {})
 /**
  * Specify the Control that is to be displayed and the cell in the tree that it is to be positioned above.
  *
@@ -88,7 +86,9 @@ extern class TreeEditor extends org.eclipse.swt.custom.ControlEditor
  *
  * @since 3.1
  */
-	public function setEditor(editor:org.eclipse.swt.widgets.Control,item:org.eclipse.swt.widgets.TreeItem,column:Int):Void;
+	//override public function setEditor(editor:org.eclipse.swt.widgets.Control):Void;
+	@:overload(function (editor:org.eclipse.swt.widgets.Control):Void {})
+	@:overload(function (editor:org.eclipse.swt.widgets.Control,item:org.eclipse.swt.widgets.TreeItem):Void {})
 /**
  * Returns the TreeItem for the row of the cell being tracked by this editor.
  *

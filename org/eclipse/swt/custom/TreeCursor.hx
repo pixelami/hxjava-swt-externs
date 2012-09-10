@@ -94,7 +94,6 @@ extern class TreeCursor extends org.eclipse.swt.widgets.Canvas
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (row:Int,column:Int):Void {})
 /**
  * Positions the TreeCursor over the cell at the given row and column in the parent tree.
  * 
@@ -107,6 +106,7 @@ extern class TreeCursor extends org.eclipse.swt.widgets.Canvas
  * </ul>
  */
 	public function setSelection(row:org.eclipse.swt.widgets.TreeItem,column:Int):Void;
+	@:overload(function (row:Int,column:Int):Void {})
 /**
  * Sets the receiver's background color to the color specified
  * by the argument, or to the default system color for the control

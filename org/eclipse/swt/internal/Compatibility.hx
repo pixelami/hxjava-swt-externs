@@ -39,8 +39,8 @@ extern class Compatibility
  * 
  * @see SWT#getMessage(String)
  */
-	@:overload(function (key:String):String {})
 	static public function getMessage(key:String,args:java.NativeArray<Dynamic>):String;
+	@:overload(function (key:String):String {})
 /**
  * Answers the length of the side adjacent to the given angle
  * of a right triangle. In other words, it returns the integer
@@ -180,7 +180,6 @@ extern class Compatibility
  * @exception SecurityException
  *  if the current SecurityManager disallows program execution
  */
-	@:overload(function (prog:String):Void {})
 /**
  * Execute progArray[0] in a separate platform process if the
  * underlying platform support this.
@@ -195,7 +194,6 @@ extern class Compatibility
  * @exception	SecurityException
  *  if the current SecurityManager disallows program execution
  */
-	@:overload(function (progArray:java.NativeArray<String>):Void {})
 /**
  * Execute prog[0] in a separate platform process if the
  * underlying platform supports this.
@@ -219,6 +217,8 @@ extern class Compatibility
  * @since 3.6
  */
 	static public function exec(prog:java.NativeArray<String>,envp:java.NativeArray<String>,workingDir:String):Void;
+	@:overload(function (prog:String):Void {})
+	@:overload(function (progArray:java.NativeArray<String>):Void {})
 /**
  * Create an InflaterInputStream if such things are supported.
  * 

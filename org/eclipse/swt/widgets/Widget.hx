@@ -147,7 +147,6 @@ extern class Widget
  * 
  * @noreference This method is not intended to be referenced by clients.
  */
-	//@:overload(function (eventType:Int,handler:org.eclipse.swt.internal.SWTEventListener):Void {})
 /**
  * Removes the listener from the collection of listeners who will
  * be notified when an event of the given type occurs. The event
@@ -171,6 +170,7 @@ extern class Widget
  * @see #notifyListeners
  */
 	public function removeListener(eventType:Int,listener:org.eclipse.swt.widgets.Listener):Void;
+	//@:overload(function (eventType:Int,handler:org.eclipse.swt.internal.SWTEventListener):Void {})
 /**
  * Checks that this class can be subclassed.
  * <p>
@@ -269,7 +269,6 @@ extern class Widget
  * 
  * @see #getData()
  */
-	@:overload(function (data:Dynamic):Void {})
 /**
  * Sets the application defined property of the receiver
  * with the specified name to the given value.
@@ -295,6 +294,7 @@ extern class Widget
  * @see #getData(String)
  */
 	public function setData(key:String,value:Dynamic):Void;
+	@:overload(function (data:Dynamic):Void {})
 /**
  * Removes the listener from the collection of listeners who will
  * be notified when the widget is disposed.
@@ -376,7 +376,6 @@ extern class Widget
  *
  * @see #setData(Object)
  */
-	@:overload(function ():Dynamic {})
 /**
  * Returns the application defined property of the receiver
  * with the specified name, or null if it has not been set.
@@ -402,6 +401,7 @@ extern class Widget
  * @see #setData(String, Object)
  */
 	public function getData(key:String):Dynamic;
+	@:overload(function ():Dynamic {})
 /**
  * Returns the <code>Display</code> that is associated with
  * the receiver.

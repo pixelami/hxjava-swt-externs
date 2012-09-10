@@ -226,7 +226,6 @@ extern class Accessible
  * 
  * @since 3.6
  */
-	@:overload(function (event:Int,eventData:Dynamic):Void {})
 /**
  * Sends a message with event-specific data and a childID
  * to accessible clients, indicating that something has changed
@@ -256,6 +255,7 @@ extern class Accessible
  * @since 3.8
  */
 	public function sendEvent(event:Int,eventData:Dynamic,childID:Int):Void;
+	@:overload(function (event:Int,eventData:Dynamic):Void {})
 /**
  * Performs the specified action.
  *

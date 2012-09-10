@@ -219,7 +219,6 @@ extern class TextLayout extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_NULL_ARGUMENT - if the gc is null</li>
  * </ul>
  */
-	@:overload(function (gc:org.eclipse.swt.graphics.GC,x:Int,y:Int):Void {})
 /**
  * Draws the receiver's text using the specified GC at the specified
  * point.
@@ -239,7 +238,6 @@ extern class TextLayout extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_NULL_ARGUMENT - if the gc is null</li>
  * </ul>
  */
-	@:overload(function (gc:org.eclipse.swt.graphics.GC,x:Int,y:Int,selectionStart:Int,selectionEnd:Int,selectionForeground:org.eclipse.swt.graphics.Color,selectionBackground:org.eclipse.swt.graphics.Color):Void {})
 /**
  * Draws the receiver's text using the specified GC at the specified
  * point.
@@ -268,6 +266,8 @@ extern class TextLayout extends org.eclipse.swt.graphics.Resource
  * @since 3.3
  */
 	public function draw(gc:org.eclipse.swt.graphics.GC,x:Int,y:Int,selectionStart:Int,selectionEnd:Int,selectionForeground:org.eclipse.swt.graphics.Color,selectionBackground:org.eclipse.swt.graphics.Color,flags:Int):Void;
+	@:overload(function (gc:org.eclipse.swt.graphics.GC,x:Int,y:Int):Void {})
+	@:overload(function (gc:org.eclipse.swt.graphics.GC,x:Int,y:Int,selectionStart:Int,selectionEnd:Int,selectionForeground:org.eclipse.swt.graphics.Color,selectionBackground:org.eclipse.swt.graphics.Color):Void {})
 /**
  * Gets the receiver's text, which will be an empty
  * string if it has never been set.
@@ -368,7 +368,6 @@ extern class TextLayout extends org.eclipse.swt.graphics.Resource
  * @see #setWidth(int)
  * @see #getLineBounds(int)
  */
-	@:overload(function ():org.eclipse.swt.graphics.Rectangle {})
 /**
  * Returns the bounds for the specified range of characters. The
  * bounds is the smallest rectangle that encompasses all characters
@@ -384,6 +383,7 @@ extern class TextLayout extends org.eclipse.swt.graphics.Resource
  * </ul>
  */
 	public function getBounds(start:Int,end:Int):org.eclipse.swt.graphics.Rectangle;
+	@:overload(function ():org.eclipse.swt.graphics.Rectangle {})
 /**
  * Sets the orientation of the receiver, which must be one
  * of <code>SWT.LEFT_TO_RIGHT</code> or <code>SWT.RIGHT_TO_LEFT</code>.
@@ -699,7 +699,6 @@ extern class TextLayout extends org.eclipse.swt.graphics.Resource
  * 
  * @see #getLocation(int, boolean)
  */
-	@:overload(function (point:org.eclipse.swt.graphics.Point,trailing:java.NativeArray<Int>):Int {})
 /**
  * Returns the character offset for the specified point.  
  * For a typical character, the trailing argument will be filled in to 
@@ -724,6 +723,7 @@ extern class TextLayout extends org.eclipse.swt.graphics.Resource
  * @see #getLocation(int, boolean)
  */
 	public function getOffset(x:Int,y:Int,trailing:java.NativeArray<Int>):Int;
+	@:overload(function (point:org.eclipse.swt.graphics.Point,trailing:java.NativeArray<Int>):Int {})
 /**
  * Returns a string containing a concise, human-readable
  * description of the receiver.

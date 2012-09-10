@@ -81,7 +81,6 @@ extern class CCombo extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (string:String):Int {})
 /**
  * Searches the receiver's list starting at the given, 
  * zero-relative index until an item is found that is equal
@@ -102,6 +101,7 @@ extern class CCombo extends org.eclipse.swt.widgets.Composite
  * </ul>
  */
 	public function indexOf(string:String,start:Int):Int;
+	@:overload(function (string:String):Int {})
 /**
  * Sets the contents of the receiver's text field to the
  * given string.
@@ -307,7 +307,6 @@ extern class CCombo extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (index:Int):Void {})
 /**
  * Searches the receiver's list starting at the first item
  * until an item is found that is equal to the argument, 
@@ -324,7 +323,6 @@ extern class CCombo extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (string:String):Void {})
 /**
  * Removes the items from the receiver's list which are
  * between the given zero-relative start and end 
@@ -342,6 +340,8 @@ extern class CCombo extends org.eclipse.swt.widgets.Composite
  * </ul>
  */
 	public function remove(start:Int,end:Int):Void;
+	@:overload(function (index:Int):Void {})
+	@:overload(function (string:String):Void {})
 /**
  * Sets the selection in the receiver's text field to the
  * range specified by the argument whose x coordinate is the
@@ -404,7 +404,6 @@ extern class CCombo extends org.eclipse.swt.widgets.Composite
  *
  * @see #add(String,int)
  */
-	@:overload(function (string:String):Void {})
 /**
  * Adds the argument to the receiver's list at the given
  * zero-relative index.
@@ -429,6 +428,7 @@ extern class CCombo extends org.eclipse.swt.widgets.Composite
  * @see #add(String)
  */
 	public function add(string:String,index:Int):Void;
+	@:overload(function (string:String):Void {})
 /**
  * Returns <code>true</code> if the receiver's list is visible,
  * and <code>false</code> otherwise.
@@ -468,8 +468,8 @@ extern class CCombo extends org.eclipse.swt.widgets.Composite
  * </ul>
  */
 	public function setItem(index:Int,string:String):Void;
+	//override public function redraw():Void;
 	@:overload(function ():Void {})
-	override public function redraw(x:Int,y:Int,width:Int,height:Int,all:Bool):Void;
 /**
  * Returns a string containing a copy of the contents of the
  * receiver's text field.

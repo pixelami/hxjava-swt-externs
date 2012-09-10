@@ -283,7 +283,6 @@ extern class ScrolledComposite extends org.eclipse.swt.widgets.Composite
  * </ul>
  * @since 2.0
  */
-	@:overload(function (origin:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Scrolls the content so that the specified point in the content is in the top 
  * left corner.  If no content has been set, nothing will occur.  
@@ -303,6 +302,7 @@ extern class ScrolledComposite extends org.eclipse.swt.widgets.Composite
  * @since 2.0
  */
 	public function setOrigin(x:Int,y:Int):Void;
+	@:overload(function (origin:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Set the Always Show Scrollbars flag.  True if the scrollbars are 
  * always shown even if they are not required.  False if the scrollbars are only 
@@ -377,7 +377,6 @@ extern class ScrolledComposite extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (size:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Specify the minimum width and height at which the ScrolledComposite will begin scrolling the
  * content with the horizontal scroll bar.  This value is only relevant if  
@@ -392,6 +391,7 @@ extern class ScrolledComposite extends org.eclipse.swt.widgets.Composite
  * </ul>
  */
 	public function setMinSize(width:Int,height:Int):Void;
+	@:overload(function (size:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Returns the Always Show Scrollbars flag.  True if the scrollbars are 
  * always shown even if they are not required.  False if the scrollbars are only 

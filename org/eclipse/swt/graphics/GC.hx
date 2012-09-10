@@ -200,7 +200,6 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  *
  * @see #drawRectangle(int, int, int, int)
  */
-	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
 /**
  *
  * Fills the interior of the rectangle specified by the arguments,
@@ -218,6 +217,7 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  * @see #drawRectangle(int, int, int, int)
  */
 	public function fillRectangle(x:Int,y:Int,width:Int,height:Int):Void;
+	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
 /**
  *
  * Sets the receiver's interpolation setting to the parameter, which
@@ -424,7 +424,6 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_NO_HANDLES - if no handles are available to perform the operation</li>
  * </ul>
  */
-	@:overload(function (image:org.eclipse.swt.graphics.Image,x:Int,y:Int):Void {})
 /**
  * Copies a rectangular area from the source image into a (potentially
  * different sized) rectangular area in the receiver. If the source
@@ -458,6 +457,7 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  * </ul>
  */
 	public function drawImage(image:org.eclipse.swt.graphics.Image,srcX:Int,srcY:Int,srcWidth:Int,srcHeight:Int,destX:Int,destY:Int,destWidth:Int,destHeight:Int):Void;
+	@:overload(function (image:org.eclipse.swt.graphics.Image,x:Int,y:Int):Void {})
 /**
  * Returns the extent of the given string. Tab expansion and
  * carriage return processing are performed.
@@ -477,7 +477,6 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_GRAPHIC_DISPOSED - if the receiver has been disposed</li>
  * </ul>
  */
-	@:overload(function (string:String):org.eclipse.swt.graphics.Point {})
 /**
  * Returns the extent of the given string. Tab expansion, line
  * delimiter and mnemonic processing are performed according to
@@ -510,6 +509,7 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  * </ul>
  */
 	public function textExtent(string:String,flags:Int):org.eclipse.swt.graphics.Point;
+	@:overload(function (string:String):org.eclipse.swt.graphics.Point {})
 /**
  * Sets the background color. The background color is used
  * for fill operations and as the background color when text
@@ -562,7 +562,6 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_GRAPHIC_DISPOSED - if the receiver has been disposed</li>
  * </ul>
  */
-	@:overload(function ():org.eclipse.swt.graphics.Rectangle {})
 /**
  *
  * Sets the region managed by the argument to the current
@@ -579,6 +578,7 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  * </ul>
  */
 	public function getClipping(region:org.eclipse.swt.graphics.Region):Void;
+	@:overload(function ():org.eclipse.swt.graphics.Rectangle {})
 /**
  * Fills the interior of the specified rectangle with a gradient
  * sweeping from left to right or top to bottom progressing
@@ -773,7 +773,6 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_GRAPHIC_DISPOSED - if the receiver has been disposed</li>
  * </ul>
  */
-	@:overload(function (string:String,x:Int,y:Int):Void {})
 /**
  *
  * Draws the given string, using the receiver's current font and
@@ -795,7 +794,6 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_GRAPHIC_DISPOSED - if the receiver has been disposed</li>
  * </ul>
  */
-	@:overload(function (string:String,x:Int,y:Int,isTransparent:Bool):Void {})
 /**
  *
  * Draws the given string, using the receiver's current font and
@@ -832,6 +830,8 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  * </ul>
  */
 	public function drawText(string:String,x:Int,y:Int,flags:Int):Void;
+	@:overload(function (string:String,x:Int,y:Int):Void {})
+	@:overload(function (string:String,x:Int,y:Int,isTransparent:Bool):Void {})
 /**
  * Returns the width of the specified character in the font
  * selected into the receiver. 
@@ -1109,7 +1109,6 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_GRAPHIC_DISPOSED - if the receiver has been disposed</li>
  * </ul>
  */
-	@:overload(function (image:org.eclipse.swt.graphics.Image,x:Int,y:Int):Void {})
 /**
  * Copies a rectangular area of the receiver at the source
  * position onto the receiver at the destination position.
@@ -1125,7 +1124,6 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_GRAPHIC_DISPOSED - if the receiver has been disposed</li>
  * </ul>
  */
-	@:overload(function (srcX:Int,srcY:Int,width:Int,height:Int,destX:Int,destY:Int):Void {})
 /**
  * Copies a rectangular area of the receiver at the source
  * position onto the receiver at the destination position.
@@ -1145,6 +1143,8 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  * @since 3.1 
  */
 	public function copyArea(srcX:Int,srcY:Int,width:Int,height:Int,destX:Int,destY:Int,paint:Bool):Void;
+	@:overload(function (image:org.eclipse.swt.graphics.Image,x:Int,y:Int):Void {})
+	@:overload(function (srcX:Int,srcY:Int,width:Int,height:Int,destX:Int,destY:Int):Void {})
 /**
  *
  * Returns the receiver's foreground color.
@@ -1274,7 +1274,6 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_GRAPHIC_DISPOSED - if the receiver has been disposed</li>
  * </ul>
  */
-	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
 /**
  *
  * Draws the outline of the rectangle specified by the arguments,
@@ -1292,6 +1291,7 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  * </ul>
  */
 	public function drawRectangle(x:Int,y:Int,width:Int,height:Int):Void;
+	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
 /**
  *
  * Returns the receiver's line cap style, which will be one
@@ -1524,7 +1524,6 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  * 
  * @since 3.1
  */
-	@:overload(function (path:org.eclipse.swt.graphics.Path):Void {})
 /**
  * Sets the area of the receiver which can be changed
  * by drawing operations to the rectangular area specified
@@ -1538,7 +1537,6 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_GRAPHIC_DISPOSED - if the receiver has been disposed</li>
  * </ul>
  */
-	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
 /**
  * Sets the area of the receiver which can be changed
  * by drawing operations to the region specified
@@ -1555,7 +1553,6 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_GRAPHIC_DISPOSED - if the receiver has been disposed</li>
  * </ul>
  */
-	@:overload(function (region:org.eclipse.swt.graphics.Region):Void {})
 /**
  * Sets the area of the receiver which can be changed
  * by drawing operations to the rectangular area specified
@@ -1571,6 +1568,9 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  * </ul>
  */
 	public function setClipping(x:Int,y:Int,width:Int,height:Int):Void;
+	@:overload(function (path:org.eclipse.swt.graphics.Path):Void {})
+	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
+	@:overload(function (region:org.eclipse.swt.graphics.Region):Void {})
 /**
  *
  * Draws the given string, using the receiver's current font and
@@ -1590,7 +1590,6 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_GRAPHIC_DISPOSED - if the receiver has been disposed</li>
  * </ul>
  */
-	@:overload(function (string:String,x:Int,y:Int):Void {})
 /**
  *
  * Draws the given string, using the receiver's current font and
@@ -1613,6 +1612,7 @@ extern class GC extends org.eclipse.swt.graphics.Resource
  * </ul>
  */
 	public function drawString(string:String,x:Int,y:Int,isTransparent:Bool):Void;
+	@:overload(function (string:String,x:Int,y:Int):Void {})
 /**
  * Returns the receiver's style information.
  * <p>

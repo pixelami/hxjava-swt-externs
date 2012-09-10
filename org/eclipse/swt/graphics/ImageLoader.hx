@@ -116,7 +116,6 @@ extern class ImageLoader
  *    <li>ERROR_UNSUPPORTED_FORMAT - if the image data cannot be saved to the requested format</li>
  * </ul>
  */
-	@:overload(function (filename:String,format:Int):Void {})
 /**
  * Saves the image data in this ImageLoader to the specified stream.
  * The format parameter can have one of the following values:
@@ -148,6 +147,7 @@ extern class ImageLoader
  * </ul>
  */
 	public function save(stream:java.io.OutputStream,format:Int):Void;
+	@:overload(function (filename:String,format:Int):Void {})
 /**
  *
  * Removes the listener from the collection of listeners who will be
@@ -212,7 +212,6 @@ extern class ImageLoader
  *    <li>ERROR_UNSUPPORTED_FORMAT - if the image file contains an unrecognized format</li>
  * </ul>
  */
-	@:overload(function (filename:String):java.NativeArray<org.eclipse.swt.graphics.ImageData> {})
 /**
  * Loads an array of <code>ImageData</code> objects from the
  * specified input stream. Throws an error if either an error
@@ -232,5 +231,6 @@ extern class ImageLoader
  * </ul>
  */
 	public function load(stream:java.io.InputStream):java.NativeArray<org.eclipse.swt.graphics.ImageData>;
+	@:overload(function (filename:String):java.NativeArray<org.eclipse.swt.graphics.ImageData> {})
 
 }

@@ -469,7 +469,6 @@ extern class Text extends org.eclipse.swt.widgets.Scrollable
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (start:Int):Void {})
 /**
  * Sets the selection to the range specified
  * by the given point, where the x coordinate
@@ -499,7 +498,6 @@ extern class Text extends org.eclipse.swt.widgets.Scrollable
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (selection:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Sets the selection to the range specified
  * by the given start and end indices.
@@ -526,6 +524,8 @@ extern class Text extends org.eclipse.swt.widgets.Scrollable
  * </ul>
  */
 	public function setSelection(start:Int,end:Int):Void;
+	@:overload(function (start:Int):Void {})
+	@:overload(function (selection:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Returns the zero-relative index of the line which is currently
  * at the top of the receiver.
@@ -555,7 +555,6 @@ extern class Text extends org.eclipse.swt.widgets.Scrollable
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function ():String {})
 /**
  * Returns a range of text.  Returns an empty string if the
  * start of the range is greater than the end.
@@ -575,6 +574,7 @@ extern class Text extends org.eclipse.swt.widgets.Scrollable
  * </ul>
  */
 	public function getText(start:Int,end:Int):String;
+	@:overload(function ():String {})
 /**
  * Returns the number of characters.
  *

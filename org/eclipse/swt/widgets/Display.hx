@@ -373,7 +373,6 @@ extern class Display extends org.eclipse.swt.graphics.Device
  * 
  * @since 2.0
  */
-	@:overload(function (point:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Sets the location of the on-screen pointer relative to the top left corner
  * of the screen.  <b>Note: It is typically considered bad practice for a
@@ -390,6 +389,7 @@ extern class Display extends org.eclipse.swt.graphics.Device
  * @since 2.1
  */
 	public function setCursorLocation(x:Int,y:Int):Void;
+	@:overload(function (point:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Checks that this class can be subclassed.
  * <p>
@@ -501,7 +501,6 @@ extern class Display extends org.eclipse.swt.graphics.Device
  * 
  * @noreference This method is not intended to be referenced by clients.
  */
-	@:overload(function (handle:haxe.Int64):org.eclipse.swt.widgets.Widget {})
 /**
  * Given the operating system handle for a widget,
  * and widget-specific id, returns the instance of
@@ -526,7 +525,6 @@ extern class Display extends org.eclipse.swt.graphics.Device
  * 
  * @since 3.1
  */
-	@:overload(function (handle:haxe.Int64,id:Int):org.eclipse.swt.widgets.Widget {})
 /**
  * Given a widget and a widget-specific id, returns the
  * instance of the <code>Widget</code> subclass which represents
@@ -545,6 +543,8 @@ extern class Display extends org.eclipse.swt.graphics.Device
  * @since 3.3
  */
 	public function findWidget(widget:org.eclipse.swt.widgets.Widget,id:Int):org.eclipse.swt.widgets.Widget;
+	@:overload(function (handle:haxe.Int64):org.eclipse.swt.widgets.Widget {})
+	@:overload(function (handle:haxe.Int64,id:Int):org.eclipse.swt.widgets.Widget {})
 /**
  * Sets the application name to the argument.
  * <p>
@@ -595,7 +595,6 @@ extern class Display extends org.eclipse.swt.graphics.Device
  * @see #setData(Object)
  * @see #disposeExec(Runnable)
  */
-	@:overload(function ():Dynamic {})
 /**
  * Returns the application defined property of the receiver
  * with the specified name, or null if it has not been set.
@@ -622,6 +621,7 @@ extern class Display extends org.eclipse.swt.graphics.Device
  * @see #disposeExec(Runnable)
  */
 	public function getData(key:String):Dynamic;
+	@:overload(function ():Dynamic {})
 	override private function checkDevice():Void;
 /**
  * Returns the maximum allowed depth of icons on this display, in bits per pixel.
@@ -982,7 +982,6 @@ extern class Display extends org.eclipse.swt.graphics.Device
  * 
  * @since 2.1.2
  */
-	@:overload(function (from:org.eclipse.swt.widgets.Control,to:org.eclipse.swt.widgets.Control,point:org.eclipse.swt.graphics.Point):org.eclipse.swt.graphics.Point {})
 /**
  * Maps a point from one coordinate system to another.
  * When the control is null, coordinates are mapped to
@@ -1019,7 +1018,6 @@ extern class Display extends org.eclipse.swt.graphics.Device
  * 
  * @since 2.1.2
  */
-	@:overload(function (from:org.eclipse.swt.widgets.Control,to:org.eclipse.swt.widgets.Control,rectangle:org.eclipse.swt.graphics.Rectangle):org.eclipse.swt.graphics.Rectangle {})
 /**
  * Maps a point from one coordinate system to another.
  * When the control is null, coordinates are mapped to
@@ -1056,7 +1054,6 @@ extern class Display extends org.eclipse.swt.graphics.Device
  * 
  * @since 2.1.2
  */
-	@:overload(function (from:org.eclipse.swt.widgets.Control,to:org.eclipse.swt.widgets.Control,x:Int,y:Int):org.eclipse.swt.graphics.Point {})
 /**
  * Maps a point from one coordinate system to another.
  * When the control is null, coordinates are mapped to
@@ -1096,6 +1093,9 @@ extern class Display extends org.eclipse.swt.graphics.Device
  * @since 2.1.2
  */
 	public function map(from:org.eclipse.swt.widgets.Control,to:org.eclipse.swt.widgets.Control,x:Int,y:Int,width:Int,height:Int):org.eclipse.swt.graphics.Rectangle;
+	@:overload(function (from:org.eclipse.swt.widgets.Control,to:org.eclipse.swt.widgets.Control,point:org.eclipse.swt.graphics.Point):org.eclipse.swt.graphics.Point {})
+	@:overload(function (from:org.eclipse.swt.widgets.Control,to:org.eclipse.swt.widgets.Control,rectangle:org.eclipse.swt.graphics.Rectangle):org.eclipse.swt.graphics.Rectangle {})
+	@:overload(function (from:org.eclipse.swt.widgets.Control,to:org.eclipse.swt.widgets.Control,x:Int,y:Int):org.eclipse.swt.graphics.Point {})
 /**
  * Returns the primary monitor for that device.
  * 
@@ -1321,7 +1321,6 @@ extern class Display extends org.eclipse.swt.graphics.Device
  * @see #getData()
  * @see #disposeExec(Runnable)
  */
-	@:overload(function (data:Dynamic):Void {})
 /**
  * Sets the application defined property of the receiver
  * with the specified name to the given argument.
@@ -1348,6 +1347,7 @@ extern class Display extends org.eclipse.swt.graphics.Device
  * @see #disposeExec(Runnable)
  */
 	public function setData(key:String,value:Dynamic):Void;
+	@:overload(function (data:Dynamic):Void {})
 /**
  *
  * Invokes platform specific functionality to dispose a GC handle.

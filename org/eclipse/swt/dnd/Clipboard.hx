@@ -60,7 +60,6 @@ extern class Clipboard
  * 
  * @since 3.0
  */
-	@:overload(function ():java.NativeArray<org.eclipse.swt.dnd.TransferData> {})
 /**
  * Returns an array of the data types currently available on the specified 
  * clipboard. Use with Transfer.isSupportedType.
@@ -85,6 +84,7 @@ extern class Clipboard
  * @since 3.1
  */
 	public function getAvailableTypes(clipboards:Int):java.NativeArray<org.eclipse.swt.dnd.TransferData>;
+	@:overload(function ():java.NativeArray<org.eclipse.swt.dnd.TransferData> {})
 /**
  * Place data of the specified type on the system clipboard.  More than one type
  * of data can be placed on the system clipboard at the same time.  Setting the
@@ -132,7 +132,6 @@ extern class Clipboard
  * <p>NOTE: ERROR_CANNOT_SET_CLIPBOARD should be an SWTException, since it is a
  * recoverable error, but can not be changed due to backward compatibility.</p>
  */
-	@:overload(function (data:java.NativeArray<Dynamic>,dataTypes:java.NativeArray<org.eclipse.swt.dnd.Transfer>):Void {})
 /**
  * Place data of the specified type on the specified clipboard.  More than one 
  * type of data can be placed on the specified clipboard at the same time.
@@ -193,6 +192,7 @@ extern class Clipboard
  * @since 3.1
  */
 	public function setContents(data:java.NativeArray<Dynamic>,dataTypes:java.NativeArray<org.eclipse.swt.dnd.Transfer>,clipboards:Int):Void;
+	@:overload(function (data:java.NativeArray<Dynamic>,dataTypes:java.NativeArray<org.eclipse.swt.dnd.Transfer>):Void {})
 /**
  * Disposes of the operating system resources associated with the clipboard. 
  * The data will still be available on the system clipboard after the dispose 
@@ -278,7 +278,6 @@ extern class Clipboard
  * 
  * @see Transfer
  */
-	@:overload(function (transfer:org.eclipse.swt.dnd.Transfer):Dynamic {})
 /**
  * Retrieve the data of the specified type currently available on the specified 
  * clipboard.  Refer to the specific subclass of <code>Transfer</code> to 
@@ -323,6 +322,7 @@ extern class Clipboard
  * @since 3.1
  */
 	public function getContents(transfer:org.eclipse.swt.dnd.Transfer,clipboards:Int):Dynamic;
+	@:overload(function (transfer:org.eclipse.swt.dnd.Transfer):Dynamic {})
 /**
  * Checks that this class can be subclassed.
  * <p>
@@ -365,7 +365,6 @@ extern class Clipboard
  * 
  * @since 3.1
  */
-	@:overload(function ():Void {})
 /**
  * If this clipboard is currently the owner of the data on the specified 
  * clipboard, clear the contents.  If this clipboard is not the owner, then 
@@ -393,5 +392,6 @@ extern class Clipboard
  * @since 3.1
  */
 	public function clearContents(clipboards:Int):Void;
+	@:overload(function ():Void {})
 
 }

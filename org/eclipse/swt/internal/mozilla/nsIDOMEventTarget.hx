@@ -11,7 +11,7 @@ extern class NsIDOMEventTarget extends org.eclipse.swt.internal.mozilla.NsISuppo
 	public function new(address:haxe.Int64):Void;
 	public function DispatchEvent(evt:haxe.Int64,_retval:java.NativeArray<Int>):Int;
 	public function RemoveEventListener(type:haxe.Int64,listener:haxe.Int64,useCapture:Int):Int;
-	@:overload(function (type:haxe.Int64,listener:haxe.Int64,useCapture:Int):Int {})
 	public function AddEventListener(type:haxe.Int64,listener:haxe.Int64,useCapture:Int,wantsUntrusted:Int,_argc:Int):Int;
+	@:overload(function (type:haxe.Int64,listener:haxe.Int64,useCapture:Int):Int {})
 
 }

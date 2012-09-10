@@ -14,8 +14,8 @@ extern class NSBezierPath extends org.eclipse.swt.internal.cocoa.NSObject
 	public function closePath():Void;
 	public function bezierPathByFlatteningPath():org.eclipse.swt.internal.cocoa.NSBezierPath;
 	public function moveToPoint(point:org.eclipse.swt.internal.cocoa.NSPoint):Void;
-	@:overload(function (center:org.eclipse.swt.internal.cocoa.NSPoint,radius:Float,startAngle:Float,endAngle:Float):Void {})
 	public function appendBezierPathWithArcWithCenter(center:org.eclipse.swt.internal.cocoa.NSPoint,radius:Float,startAngle:Float,endAngle:Float,clockwise:Bool):Void;
+	@:overload(function (center:org.eclipse.swt.internal.cocoa.NSPoint,radius:Float,startAngle:Float,endAngle:Float):Void {})
 	public function appendBezierPath(path:org.eclipse.swt.internal.cocoa.NSBezierPath):Void;
 	public function elementAtIndex(index:haxe.Int64,points:haxe.Int64):haxe.Int64;
 	public function setClip():Void;

@@ -119,7 +119,6 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (index:Int):Void {})
 /**
  * Removes the items from the receiver's list at the given
  * zero-relative indices.
@@ -135,7 +134,6 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (indices:java.NativeArray<Int>):Void {})
 /**
  * Removes the items from the receiver which are
  * between the given zero-relative start and end 
@@ -153,6 +151,8 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  * </ul>
  */
 	public function remove(start:Int,end:Int):Void;
+	@:overload(function (index:Int):Void {})
+	@:overload(function (indices:java.NativeArray<Int>):Void {})
 /**
  * Marks the receiver's header as visible if the argument is <code>true</code>,
  * and marks it invisible otherwise. 
@@ -201,7 +201,6 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  * @see Table#deselectAll()
  * @see Table#select(int)
  */
-	@:overload(function (index:Int):Void {})
 /**
  * Selects the items at the given zero-relative indices in the receiver.
  * The current selection is cleared before the new items are selected.
@@ -224,7 +223,6 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  * @see Table#deselectAll()
  * @see Table#select(int[])
  */
-	@:overload(function (indices:java.NativeArray<Int>):Void {})
 /**
  * Sets the receiver's selection to the given item.
  * The current selection is cleared before the new item is selected.
@@ -245,7 +243,6 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  * 
  * @since 3.2
  */
-	@:overload(function (item:org.eclipse.swt.widgets.TableItem):Void {})
 /**
  * Sets the receiver's selection to be the given array of items.
  * The current selection is cleared before the new items are selected.
@@ -270,7 +267,6 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  * @see Table#select(int[])
  * @see Table#setSelection(int[])
  */
-	@:overload(function (items:java.NativeArray<org.eclipse.swt.widgets.TableItem>):Void {})
 /**
  * Selects the items in the range specified by the given zero-relative
  * indices in the receiver. The range of indices is inclusive.
@@ -294,6 +290,10 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  * @see Table#select(int,int)
  */
 	public function setSelection(start:Int,end:Int):Void;
+	@:overload(function (index:Int):Void {})
+	@:overload(function (indices:java.NativeArray<Int>):Void {})
+	@:overload(function (item:org.eclipse.swt.widgets.TableItem):Void {})
+	@:overload(function (items:java.NativeArray<org.eclipse.swt.widgets.TableItem>):Void {})
 /**
  * Returns the number of selected items contained in the receiver.
  *
@@ -317,7 +317,6 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (index:Int):Void {})
 /**
  * Deselects the items at the given zero-relative indices in the receiver.
  * If the item at the given zero-relative index in the receiver 
@@ -335,7 +334,6 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (indices:java.NativeArray<Int>):Void {})
 /**
  * Deselects the items at the given zero-relative indices in the receiver.
  * If the item at the given zero-relative index in the receiver 
@@ -352,6 +350,8 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  * </ul>
  */
 	public function deselect(start:Int,end:Int):Void;
+	@:overload(function (index:Int):Void {})
+	@:overload(function (indices:java.NativeArray<Int>):Void {})
 /**
  * Searches the receiver's list starting at the first column
  * (index 0) until a column is found that is equal to the 
@@ -369,7 +369,6 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (column:org.eclipse.swt.widgets.TableColumn):Int {})
 /**
  * Searches the receiver's list starting at the first item
  * (index 0) until an item is found that is equal to the 
@@ -388,6 +387,7 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  * </ul>
  */
 	public function indexOf(item:org.eclipse.swt.widgets.TableItem):Int;
+	@:overload(function (column:org.eclipse.swt.widgets.TableColumn):Int {})
 /**
  * Returns the direction of the sort indicator for the receiver. 
  * The value will be one of <code>UP</code>, <code>DOWN</code> 
@@ -480,7 +480,6 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  * 
  * @since 3.0
  */
-	@:overload(function (index:Int):Void {})
 /**
  * Clears the items at the given zero-relative indices in the receiver.
  * The text, icon and other attributes of the items are set to their default
@@ -503,7 +502,6 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  * 
  * @since 3.0
  */
-	@:overload(function (indices:java.NativeArray<Int>):Void {})
 /**
  * Removes the items from the receiver which are between the given
  * zero-relative start and end indices (inclusive).  The text, icon
@@ -528,6 +526,8 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  * @since 3.0
  */
 	public function clear(start:Int,end:Int):Void;
+	@:overload(function (index:Int):Void {})
+	@:overload(function (indices:java.NativeArray<Int>):Void {})
 	override public function computeSize(wHint:Int,hHint:Int,changed:Bool):org.eclipse.swt.graphics.Point;
 /**
  * Deselects all selected items in the receiver.
@@ -589,7 +589,6 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (index:Int):org.eclipse.swt.widgets.TableItem {})
 /**
  * Returns the item at the given point in the receiver
  * or null if no such item exists. The point is in the
@@ -614,6 +613,7 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  * </ul>
  */
 	public function getItem(point:org.eclipse.swt.graphics.Point):org.eclipse.swt.widgets.TableItem;
+	@:overload(function (index:Int):org.eclipse.swt.widgets.TableItem {})
 /**
  * Shows the column.  If the column is already showing in the receiver,
  * this method simply returns.  Otherwise, the columns are scrolled until
@@ -780,7 +780,6 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (index:Int):Void {})
 /**
  * Selects the items at the given zero-relative indices in the receiver.
  * The current selection is not cleared before the new items are selected.
@@ -804,7 +803,6 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  * 
  * @see Table#setSelection(int[])
  */
-	@:overload(function (indices:java.NativeArray<Int>):Void {})
 /**
  * Selects the items in the range specified by the given zero-relative
  * indices in the receiver. The range of indices is inclusive.
@@ -829,6 +827,8 @@ extern class Table extends org.eclipse.swt.widgets.Composite
  * @see Table#setSelection(int,int)
  */
 	public function select(start:Int,end:Int):Void;
+	@:overload(function (index:Int):Void {})
+	@:overload(function (indices:java.NativeArray<Int>):Void {})
 /**
  * Returns the height of the receiver's header 
  *

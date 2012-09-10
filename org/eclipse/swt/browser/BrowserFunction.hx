@@ -176,6 +176,6 @@ extern class BrowserFunction
  *    <li>ERROR_FUNCTION_DISPOSED when the BrowserFunction has been disposed</li>
  * </ul>
  */
-	public function function(arguments:java.NativeArray<Dynamic>):Dynamic;
+	public function function_(arguments:java.NativeArray<Dynamic>):Dynamic;
 
 }

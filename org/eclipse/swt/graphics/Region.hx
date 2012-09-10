@@ -107,7 +107,6 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_GRAPHIC_DISPOSED - if the receiver has been disposed</li>
  * </ul>
  */
-	@:overload(function (pt:org.eclipse.swt.graphics.Point):Bool {})
 /**
  * Returns <code>true</code> if the point specified by the
  * arguments is inside the area specified by the receiver,
@@ -122,6 +121,7 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  * </ul>
  */
 	public function contains(x:Int,y:Int):Bool;
+	@:overload(function (pt:org.eclipse.swt.graphics.Point):Bool {})
 	static public function cocoa_new(device:org.eclipse.swt.graphics.Device,handle:haxe.Int64):org.eclipse.swt.graphics.Region;
 /**
  * Adds the given polygon to the collection of polygons
@@ -138,7 +138,6 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  *
  * @since 3.0
  */
-	@:overload(function (pointArray:java.NativeArray<Int>):Void {})
 /**
  * Adds the given rectangle to the collection of polygons
  * the receiver maintains to describe its area.
@@ -153,7 +152,6 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_GRAPHIC_DISPOSED - if the receiver has been disposed</li>
  * </ul>
  */
-	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
 /**
  * Adds all of the polygons which make up the area covered
  * by the argument to the collection of polygons the receiver
@@ -169,7 +167,6 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  *    <li>ERROR_GRAPHIC_DISPOSED - if the receiver has been disposed</li>
  * </ul>
  */
-	@:overload(function (region:org.eclipse.swt.graphics.Region):Void {})
 /**
  * Adds the given rectangle to the collection of polygons
  * the receiver maintains to describe its area.
@@ -189,6 +186,9 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  * @since 3.1
  */
 	public function add(x:Int,y:Int,width:Int,height:Int):Void;
+	@:overload(function (pointArray:java.NativeArray<Int>):Void {})
+	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
+	@:overload(function (region:org.eclipse.swt.graphics.Region):Void {})
 /**
  * Returns <code>true</code> if the receiver does not cover any
  * area in the (x, y) coordinate plane, and <code>false</code> if
@@ -216,7 +216,6 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  * 
  * @since 3.0
  */
-	@:overload(function (pointArray:java.NativeArray<Int>):Void {})
 /**
  * Subtracts the given rectangle from the collection of polygons
  * the receiver maintains to describe its area.
@@ -233,7 +232,6 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  * 
  * @since 3.0
  */
-	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
 /**
  * Subtracts all of the polygons which make up the area covered
  * by the argument from the collection of polygons the receiver
@@ -251,7 +249,6 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  * 
  * @since 3.0
  */
-	@:overload(function (region:org.eclipse.swt.graphics.Region):Void {})
 /**
  * Subtracts the given rectangle from the collection of polygons
  * the receiver maintains to describe its area.
@@ -271,6 +268,9 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  * @since 3.1
  */
 	public function subtract(x:Int,y:Int,width:Int,height:Int):Void;
+	@:overload(function (pointArray:java.NativeArray<Int>):Void {})
+	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
+	@:overload(function (region:org.eclipse.swt.graphics.Region):Void {})
 /**
  * Intersects the given rectangle to the collection of polygons
  * the receiver maintains to describe its area.
@@ -287,7 +287,6 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  * 
  * @since 3.0
  */
-	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
 /**
  * Intersects all of the polygons which make up the area covered
  * by the argument to the collection of polygons the receiver
@@ -305,7 +304,6 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  * 
  * @since 3.0
  */
-	@:overload(function (region:org.eclipse.swt.graphics.Region):Void {})
 /**
  * Intersects the given rectangle to the collection of polygons
  * the receiver maintains to describe its area.
@@ -325,6 +323,8 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  * @since 3.1
  */
 	public function intersect(x:Int,y:Int,width:Int,height:Int):Void;
+	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
+	@:overload(function (region:org.eclipse.swt.graphics.Region):Void {})
 /**
  * Returns <code>true</code> if the given rectangle intersects
  * with any of the polygons the receiver maintains to describe
@@ -342,7 +342,6 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  *
  * @see Rectangle#intersects(Rectangle)
  */
-	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Bool {})
 /**
  * Returns <code>true</code> if the rectangle described by the
  * arguments intersects with any of the polygons the receiver
@@ -361,6 +360,7 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  * @see Rectangle#intersects(Rectangle)
  */
 	public function intersects(x:Int,y:Int,width:Int,height:Int):Bool;
+	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Bool {})
 /**
  * Returns a rectangle which represents the rectangular
  * union of the collection of polygons the receiver
@@ -390,7 +390,6 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  * 
  * @since 3.1
  */
-	@:overload(function (pt:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Translate all of the polygons the receiver maintains to describe
  * its area by the specified point.
@@ -405,6 +404,7 @@ extern class Region extends org.eclipse.swt.graphics.Resource
  * @since 3.1
  */
 	public function translate(x:Int,y:Int):Void;
+	@:overload(function (pt:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Returns a string containing a concise, human-readable
  * description of the receiver.

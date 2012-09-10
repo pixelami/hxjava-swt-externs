@@ -367,7 +367,6 @@ extern class Shell extends org.eclipse.swt.widgets.Decorations
  * 
  * @since 3.1
  */
-	@:overload(function (size:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Sets the receiver's minimum size to the size specified by the arguments.
  * If the new minimum size is larger than the current size of the receiver,
@@ -384,6 +383,7 @@ extern class Shell extends org.eclipse.swt.widgets.Decorations
  * @since 3.1
  */
 	public function setMinimumSize(width:Int,height:Int):Void;
+	@:overload(function (size:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Requests that the window manager close the receiver in
  * the same way it would be closed when the user clicks on

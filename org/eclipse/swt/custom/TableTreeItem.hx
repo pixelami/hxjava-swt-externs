@@ -157,7 +157,6 @@ extern class TableTreeItem extends org.eclipse.swt.widgets.Item
  *		<li>ERROR_WIDGET_DISPOSED when the widget has been disposed</li>
  *	</ul>
  */
-	@:overload(function (image:org.eclipse.swt.graphics.Image):Void {})
 /**
  * Sets the image at an index.
  * <p>
@@ -172,7 +171,8 @@ extern class TableTreeItem extends org.eclipse.swt.widgets.Item
  *		<li>ERROR_WIDGET_DISPOSED when the widget has been disposed</li>
  *	</ul>
  */
-	public function setImage(index:Int,image:org.eclipse.swt.graphics.Image):Void;
+	//override public function setImage(image:org.eclipse.swt.graphics.Image):Void;
+	@:overload(function (image:org.eclipse.swt.graphics.Image):Void {})
 /**
  * Returns the receiver's parent item, which must be a
  * <code>TableTreeItem</code> or null when the receiver is a
@@ -254,7 +254,6 @@ extern class TableTreeItem extends org.eclipse.swt.widgets.Item
  * @return the index of the item or -1 if the item is not found
  */
 	public function indexOf(item:org.eclipse.swt.custom.TableTreeItem):Int;
-	@:overload(function (string:String):Void {})
 /**
  * Sets the widget text.
  * <p>
@@ -274,7 +273,8 @@ extern class TableTreeItem extends org.eclipse.swt.widgets.Item
  *		<li>ERROR_WIDGET_DISPOSED when the widget has been disposed</li>
  *	</ul>
  */
-	public function setText(index:Int,text:String):Void;
+	//override public function setText(string:String):Void;
+	@:overload(function (string:String):Void {})
 /**
  * Sets the checked state of the checkbox for this item.  This state change 
  * only applies if the Table was created with the SWT.CHECK style.
@@ -302,7 +302,6 @@ extern class TableTreeItem extends org.eclipse.swt.widgets.Item
  * @since 2.1
  */
 	public function getGrayed():Bool;
-	@:overload(function ():String {})
 /**
  * Gets the item text at the specified index.
  * <p>
@@ -315,7 +314,8 @@ extern class TableTreeItem extends org.eclipse.swt.widgets.Item
  * @param index the index of the item
  * @return the item text at the specified index, which can be null
  */
-	public function getText(index:Int):String;
+	//override public function getText():String;
+	@:overload(function ():String {})
 /**
  * Returns the font that the receiver will use to paint textual information for this item.
  *
@@ -441,7 +441,6 @@ extern class TableTreeItem extends org.eclipse.swt.widgets.Item
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function ():org.eclipse.swt.graphics.Image {})
 /**
  * Gets the image at the specified index.
  * <p>
@@ -453,7 +452,8 @@ extern class TableTreeItem extends org.eclipse.swt.widgets.Item
  * @param index the index of the image
  * @return the image at the specified index or null
  */
-	public function getImage(index:Int):org.eclipse.swt.graphics.Image;
+	//override public function getImage():org.eclipse.swt.graphics.Image;
+	@:overload(function ():org.eclipse.swt.graphics.Image {})
 /**
  * Returns the receiver's background color.
  *

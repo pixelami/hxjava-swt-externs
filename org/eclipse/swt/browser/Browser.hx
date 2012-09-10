@@ -218,7 +218,6 @@ extern class Browser extends org.eclipse.swt.widgets.Composite
  * 
  * @since 3.0
  */
-	@:overload(function (html:String):Bool {})
 /**
  * Renders a string containing HTML.  The rendering of the content occurs asynchronously.
  * The rendered page can be given either trusted or untrusted permissions. 
@@ -256,6 +255,7 @@ extern class Browser extends org.eclipse.swt.widgets.Composite
  * @since 3.6
  */
 	public function setText(html:String,trusted:Bool):Bool;
+	@:overload(function (html:String):Bool {})
 /**
  * Attempts to dispose the receiver, but allows the dispose to be vetoed
  * by the user in response to an <code>onbeforeunload</code> listener
@@ -380,7 +380,6 @@ extern class Browser extends org.eclipse.swt.widgets.Composite
  * 
  * @since 3.0
  */
-	@:overload(function (url:String):Bool {})
 /**
  * Begins loading a URL.  The loading of its content occurs asynchronously.
  * <p>
@@ -408,6 +407,7 @@ extern class Browser extends org.eclipse.swt.widgets.Composite
  * @since 3.6
  */
 	public function setUrl(url:String,postData:String,headers:java.NativeArray<String>):Bool;
+	@:overload(function (url:String):Bool {})
 /**
  * Navigate to the next session history item.
  *

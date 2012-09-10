@@ -263,7 +263,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * 
  * @see #setStyleRanges(int[], StyleRange[])
  */
-	@:overload(function (ranges:java.NativeArray<org.eclipse.swt.custom.StyleRange>):Void {})
 /**
  *
  * Sets styles to be used for rendering the widget content.
@@ -298,7 +297,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * 
  * @since 3.2 
  */
-	@:overload(function (ranges:java.NativeArray<Int>,styles:java.NativeArray<org.eclipse.swt.custom.StyleRange>):Void {})
 /**
  *
  * Clears the styles in the range specified by <code>start</code> and 
@@ -336,6 +334,8 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * @since 3.2 
  */
 	public function setStyleRanges(start:Int,length:Int,ranges:java.NativeArray<Int>,styles:java.NativeArray<org.eclipse.swt.custom.StyleRange>):Void;
+	@:overload(function (ranges:java.NativeArray<org.eclipse.swt.custom.StyleRange>):Void {})
+	@:overload(function (ranges:java.NativeArray<Int>,styles:java.NativeArray<org.eclipse.swt.custom.StyleRange>):Void {})
 /**
  *
  * Adds a paint object listener. A paint object event is sent by the widget when an object
@@ -447,7 +447,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function ():Void {})
 /**
  * Copies the selected text to the specified clipboard.  The text will be put in the 
  * clipboard in plain text format and RTF format.
@@ -470,6 +469,7 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * @since 3.1
  */
 	public function copy(clipboardType:Int):Void;
+	@:overload(function ():Void {})
 /**
  *
  * Sets whether the widget implements double click mouse behavior.
@@ -520,7 +520,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * 
  * @see #getStyleRanges(boolean)
  */
-	@:overload(function ():java.NativeArray<Int> {})
 /**
  * Returns the ranges of text that have an associated StyleRange.
  * Returns an empty array if a LineStyleListener has been set. 
@@ -551,6 +550,7 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * @see #getStyleRanges(int, int, boolean)
  */
 	public function getRanges(start:Int,length:Int):java.NativeArray<Int>;
+	@:overload(function ():java.NativeArray<Int> {})
 /**
  * Sets the line spacing of the widget. The line spacing applies for all lines.
  * 
@@ -1518,7 +1518,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * 
  * @see #getStyleRanges(boolean)
  */
-	@:overload(function ():java.NativeArray<org.eclipse.swt.custom.StyleRange> {})
 /**
  * Returns the styles.
  * <p>
@@ -1547,7 +1546,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * @see #getRanges(int, int)
  * @see #setStyleRanges(int[], StyleRange[])
  */
-	@:overload(function (includeRanges:Bool):java.NativeArray<org.eclipse.swt.custom.StyleRange> {})
 /**
  * Returns the styles for the given text range.
  * <p>
@@ -1582,7 +1580,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * 
  * @since 3.0
  */
-	@:overload(function (start:Int,length:Int):java.NativeArray<org.eclipse.swt.custom.StyleRange> {})
 /**
  * Returns the styles for the given text range.
  * <p>
@@ -1621,6 +1618,9 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * @see #setStyleRanges(int[], StyleRange[])
  */
 	public function getStyleRanges(start:Int,length:Int,includeRanges:Bool):java.NativeArray<org.eclipse.swt.custom.StyleRange>;
+	@:overload(function ():java.NativeArray<org.eclipse.swt.custom.StyleRange> {})
+	@:overload(function (includeRanges:Bool):java.NativeArray<org.eclipse.swt.custom.StyleRange> {})
+	@:overload(function (start:Int,length:Int):java.NativeArray<org.eclipse.swt.custom.StyleRange> {})
 /**
  *
  * Sets the widget content. 
@@ -1730,7 +1730,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * </ul>
  * @see #getLineHeight(int)
  */
-	@:overload(function ():Int {})
 /**
  * Returns the line height at the given offset.
  *
@@ -1749,6 +1748,7 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * @since 3.2
  */
 	public function getLineHeight(offset:Int):Int;
+	@:overload(function ():Int {})
 /**
  *
  * Gets the number of text lines.
@@ -2239,7 +2239,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * 
  * @since 3.5
  */
-	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
 /**
  * Sets the block selection bounds. The bounds is 
  * relative to the upper left corner of the document.
@@ -2257,6 +2256,7 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * @since 3.5
  */
 	public function setBlockSelectionBounds(x:Int,y:Int,width:Int,height:Int):Void;
+	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
 /**
  * Sets the receiver's selection background color to the color specified
  * by the argument, or to the default system color for the control
@@ -2319,7 +2319,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * multi byte line delimiter (and thus neither clearly in front of or after the line delimiter)
  * </ul> 
  */
-	@:overload(function (start:Int):Void {})
 /**
  *
  * Sets the selection and scrolls it into view.
@@ -2342,7 +2341,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * multi byte line delimiter (and thus neither clearly in front of or after the line delimiter)
  * </ul> 
  */
-	@:overload(function (point:org.eclipse.swt.graphics.Point):Void {})
 /**
  *
  * Sets the selection and scrolls it into view.
@@ -2366,6 +2364,8 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * </ul>
  */
 	public function setSelection(start:Int,end:Int):Void;
+	@:overload(function (start:Int):Void {})
+	@:overload(function (point:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Returns the offset of the character at the given location relative 
  * to the first character in the document.
@@ -2433,7 +2433,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  *
  * @see Control#update()
  */
-	@:overload(function ():Void {})
 /**
  * Causes the rectangular area of the receiver specified by
  * the arguments to be marked as needing to be redrawn. 
@@ -2464,7 +2463,8 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  *
  * @see Control#update()
  */
-	override public function redraw(x:Int,y:Int,width:Int,height:Int,all:Bool):Void;
+	//override public function redraw():Void;
+	@:overload(function ():Void {})
 /**
  * Returns a copy of the widget content.
  *
@@ -2474,7 +2474,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function ():String {})
 /**
  * Returns the widget content between the two offsets.
  *
@@ -2491,6 +2490,7 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * </ul>
  */
 	public function getText(start:Int,end:Int):String;
+	@:overload(function ():String {})
 /**
  * Returns the alignment of the widget.
  * 
@@ -2731,7 +2731,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function ():Void {})
 /**
  *
  * Returns a runnable that will print the widget's text
@@ -2752,7 +2751,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  *    <li>ERROR_NULL_ARGUMENT when printer is null</li>
  * </ul>
  */
-	@:overload(function (printer:org.eclipse.swt.printing.Printer):java.lang.Runnable {})
 /**
  *
  * Returns a runnable that will print the widget's text
@@ -2776,6 +2774,8 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * @since 2.1
  */
 	public function print(printer:org.eclipse.swt.printing.Printer,options:org.eclipse.swt.custom.StyledTextPrintOptions):java.lang.Runnable;
+	@:overload(function ():Void {})
+	@:overload(function (printer:org.eclipse.swt.printing.Printer):java.lang.Runnable {})
 /**
  * Returns whether the widget wraps lines.
  *
@@ -2837,7 +2837,6 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * 
  * @see #getBaseline(int)
  */
-	@:overload(function ():Int {})
 /**
  * Returns the baseline at the given offset, in pixels. 
  *
@@ -2856,6 +2855,7 @@ extern class StyledText extends org.eclipse.swt.widgets.Canvas
  * @since 3.2
  */
 	public function getBaseline(offset:Int):Int;
+	@:overload(function ():Int {})
 /**
  * Returns the alignment of the line at the given index.
  * 

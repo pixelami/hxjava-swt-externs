@@ -97,7 +97,6 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  * 
  * @since 2.0
  */
-	@:overload(function ():org.eclipse.swt.graphics.Color {})
 /**
  * 
  * Returns the foreground color at the given column index in the receiver.
@@ -113,6 +112,7 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  * @since 3.0
  */
 	public function getForeground(index:Int):org.eclipse.swt.graphics.Color;
+	@:overload(function ():org.eclipse.swt.graphics.Color {})
 /**
  * Sets the image for multiple columns in the table. 
  * 
@@ -127,8 +127,6 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (images:java.NativeArray<org.eclipse.swt.graphics.Image>):Void {})
-	@:overload(function (image:org.eclipse.swt.graphics.Image):Void {})
 /**
  * Sets the receiver's image at a column.
  *
@@ -143,7 +141,9 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	public function setImage(index:Int,image:org.eclipse.swt.graphics.Image):Void;
+	//override public function setImage(image:org.eclipse.swt.graphics.Image):Void;
+	@:overload(function (images:java.NativeArray<org.eclipse.swt.graphics.Image>):Void {})
+	@:overload(function (image:org.eclipse.swt.graphics.Image):Void {})
 /**
  * Returns the receiver's parent, which must be a <code>Table</code>.
  *
@@ -172,7 +172,6 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  * 
  * @since 3.0
  */
-	@:overload(function (font:org.eclipse.swt.graphics.Font):Void {})
 /**
  * Sets the font that the receiver will use to paint textual information
  * for the specified cell in this item to the font specified by the 
@@ -193,6 +192,7 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  * @since 3.0
  */
 	public function setFont(index:Int,font:org.eclipse.swt.graphics.Font):Void;
+	@:overload(function (font:org.eclipse.swt.graphics.Font):Void {})
 /**
  * Sets the receiver's foreground color to the color specified
  * by the argument, or to the default system color for the item
@@ -210,7 +210,6 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  * 
  * @since 2.0
  */
-	@:overload(function (color:org.eclipse.swt.graphics.Color):Void {})
 /**
  * Sets the foreground color at the given column index in the receiver 
  * to the color specified by the argument, or to the default system color for the item
@@ -230,6 +229,7 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  * @since 3.0
  */
 	public function setForeground(index:Int,color:org.eclipse.swt.graphics.Color):Void;
+	@:overload(function (color:org.eclipse.swt.graphics.Color):Void {})
 	override private function checkSubclass():Void;
 /**
  * Sets the text for multiple columns in the table. 
@@ -244,8 +244,6 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (strings:java.NativeArray<String>):Void {})
-	@:overload(function (string:String):Void {})
 /**
  * Sets the receiver's text at a column
  *
@@ -260,7 +258,9 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	public function setText(index:Int,string:String):Void;
+	//override public function setText(string:String):Void;
+	@:overload(function (strings:java.NativeArray<String>):Void {})
+	@:overload(function (string:String):Void {})
 /**
  * Sets the checked state of the checkbox for this item.  This state change 
  * only applies if the Table was created with the SWT.CHECK style.
@@ -286,7 +286,6 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  * </ul>
  */
 	public function getGrayed():Bool;
-	@:overload(function ():String {})
 /**
  * Returns the text stored at the given column index in the receiver,
  * or empty string if the text has not been set.
@@ -299,7 +298,8 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	public function getText(index:Int):String;
+	//override public function getText():String;
+	@:overload(function ():String {})
 /**
  * Sets the indent of the first column's image, expressed in terms of the image's width.
  *
@@ -341,7 +341,6 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  *
  * @since 3.0
  */
-	@:overload(function ():org.eclipse.swt.graphics.Font {})
 /**
  * Returns the font that the receiver will use to paint textual information
  * for the specified cell in this item.
@@ -357,6 +356,7 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  * @since 3.0
  */
 	public function getFont(index:Int):org.eclipse.swt.graphics.Font;
+	@:overload(function ():org.eclipse.swt.graphics.Font {})
 /**
  * Gets the image indent.
  *
@@ -397,7 +397,6 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  * 
  * @since 2.0
  */
-	@:overload(function (color:org.eclipse.swt.graphics.Color):Void {})
 /**
  * Sets the background color at the given column index in the receiver 
  * to the color specified by the argument, or to the default system color for the item
@@ -417,6 +416,7 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  * @since 3.0
  */
 	public function setBackground(index:Int,color:org.eclipse.swt.graphics.Color):Void;
+	@:overload(function (color:org.eclipse.swt.graphics.Color):Void {})
 /**
  * Returns a rectangle describing the size and location of the receiver's
  * text relative to its parent.
@@ -430,7 +430,6 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  * 
  * @since 3.2
  */
-	@:overload(function ():org.eclipse.swt.graphics.Rectangle {})
 /**
  * Returns a rectangle describing the receiver's size and location
  * relative to its parent at a column in the table.
@@ -444,6 +443,7 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  * </ul>
  */
 	public function getBounds(index:Int):org.eclipse.swt.graphics.Rectangle;
+	@:overload(function ():org.eclipse.swt.graphics.Rectangle {})
 /**
  * Returns <code>true</code> if the receiver is checked,
  * and false otherwise.  When the parent does not have
@@ -474,7 +474,6 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  * @since 3.3
  */
 	public function getTextBounds(index:Int):org.eclipse.swt.graphics.Rectangle;
-	@:overload(function ():org.eclipse.swt.graphics.Image {})
 /**
  * Returns the image stored at the given column index in the receiver,
  * or null if the image has not been set or if the column does not exist.
@@ -487,7 +486,8 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	public function getImage(index:Int):org.eclipse.swt.graphics.Image;
+	//override public function getImage():org.eclipse.swt.graphics.Image;
+	@:overload(function ():org.eclipse.swt.graphics.Image {})
 /**
  * Returns the receiver's background color.
  *
@@ -500,7 +500,6 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  * 
  * @since 2.0
  */
-	@:overload(function ():org.eclipse.swt.graphics.Color {})
 /**
  * Returns the background color at the given column index in the receiver.
  *
@@ -515,5 +514,6 @@ extern class TableItem extends org.eclipse.swt.widgets.Item
  * @since 3.0
  */
 	public function getBackground(index:Int):org.eclipse.swt.graphics.Color;
+	@:overload(function ():org.eclipse.swt.graphics.Color {})
 
 }

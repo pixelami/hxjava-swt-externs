@@ -36,7 +36,6 @@ extern class TaskBar extends org.eclipse.swt.widgets.Widget
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (index:Int):org.eclipse.swt.widgets.TaskItem {})
 /**
  * Returns the <code>TaskItem</code> for the given <code>Shell</code> or the <code>TaskItem</code> 
  * for the application if the <code>Shell</code> parameter is <code>null</code>.
@@ -51,6 +50,7 @@ extern class TaskBar extends org.eclipse.swt.widgets.Widget
  * </ul>
  */
 	public function getItem(shell:org.eclipse.swt.widgets.Shell):org.eclipse.swt.widgets.TaskItem;
+	@:overload(function (index:Int):org.eclipse.swt.widgets.TaskItem {})
 /**
  * Returns an array of <code>TaskItem</code>s which are the items
  * in the receiver. 

@@ -1,3 +1,5 @@
+package foobarsky.best.deals;
+
 import org.eclipse.swt.accessibility.AccessibleValueListener;
 import org.eclipse.swt.accessibility.AccessibleValueEvent;
 import org.eclipse.swt.accessibility.AccessibleValueAdapter;

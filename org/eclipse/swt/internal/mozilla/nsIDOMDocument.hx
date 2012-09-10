@@ -19,8 +19,8 @@ extern class NsIDOMDocument extends org.eclipse.swt.internal.mozilla.NsIDOMNode
 	public function MozSetImageElement(aImageElementId:haxe.Int64,aImageElement:haxe.Int64):Int;
 	public function GetElementsByTagNameNS(namespaceURI:haxe.Int64,localName:haxe.Int64,_retval:java.NativeArray<haxe.Int64>):Int;
 	public function GetMozHidden(aMozHidden:java.NativeArray<Int>):Int;
-	@:overload(function (importedNode:haxe.Int64,deep:Int,_retval:java.NativeArray<haxe.Int64>):Int {})
 	public function ImportNode(importedNode:haxe.Int64,deep:Int,_argc:Int,_retval:java.NativeArray<haxe.Int64>):Int;
+	@:overload(function (importedNode:haxe.Int64,deep:Int,_retval:java.NativeArray<haxe.Int64>):Int {})
 	public function GetElementById(elementId:haxe.Int64,_retval:java.NativeArray<haxe.Int64>):Int;
 	public function GetOnreadystatechange(cx:haxe.Int64,aOnreadystatechange:haxe.Int64):Int;
 	public function SetTitle(aTitle:haxe.Int64):Int;

@@ -159,7 +159,6 @@ extern class DND
  *
  * @param code the DND error code
  */
-	@:overload(function (code:Int):Void {})
 /**
  * Throws an appropriate exception based on the passed in error code.
  * The <code>hresult</code> argument should be either 0, or the
@@ -186,5 +185,6 @@ extern class DND
  * @see IllegalArgumentException
  */
 	static public function error(code:Int,hresult:Int):Void;
+	@:overload(function (code:Int):Void {})
 
 }

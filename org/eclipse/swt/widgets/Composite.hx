@@ -242,7 +242,6 @@ extern class Composite extends org.eclipse.swt.widgets.Scrollable
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function ():Void {})
 /**
  * If the receiver has a layout, asks the layout to <em>lay out</em>
  * (that is, set the size and location of) the receiver's children. 
@@ -274,7 +273,6 @@ extern class Composite extends org.eclipse.swt.widgets.Scrollable
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (changed:Bool):Void {})
 /**
  * Forces a lay out (that is, sets the size and location) of all widgets that 
  * are in the parent hierarchy of the changed control up to and including the 
@@ -303,7 +301,6 @@ extern class Composite extends org.eclipse.swt.widgets.Scrollable
  *
  * @since 3.1
  */
-	@:overload(function (changed:java.NativeArray<org.eclipse.swt.widgets.Control>):Void {})
 /**
  * If the receiver has a layout, asks the layout to <em>lay out</em>
  * (that is, set the size and location of) the receiver's children. 
@@ -339,7 +336,6 @@ extern class Composite extends org.eclipse.swt.widgets.Scrollable
  *
  * @since 3.1
  */
-	@:overload(function (changed:Bool,all:Bool):Void {})
 /**
  * Forces a lay out (that is, sets the size and location) of all widgets that 
  * are in the parent hierarchy of the changed control up to and including the 
@@ -399,6 +395,10 @@ extern class Composite extends org.eclipse.swt.widgets.Scrollable
  * @since 3.6
  */
 	public function layout(changed:java.NativeArray<org.eclipse.swt.widgets.Control>,flags:Int):Void;
+	@:overload(function ():Void {})
+	@:overload(function (changed:Bool):Void {})
+	@:overload(function (changed:java.NativeArray<org.eclipse.swt.widgets.Control>):Void {})
+	@:overload(function (changed:Bool,all:Bool):Void {})
 /**
  * Returns <code>true</code> if the receiver or any ancestor 
  * up to and including the receiver's nearest ancestor shell

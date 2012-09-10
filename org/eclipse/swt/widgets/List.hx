@@ -71,7 +71,6 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (index:Int):Void {})
 /**
  * Searches the receiver's list starting at the first item
  * until an item is found that is equal to the argument, 
@@ -88,7 +87,6 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (string:String):Void {})
 /**
  * Removes the items from the receiver at the given
  * zero-relative indices.
@@ -104,7 +102,6 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (indices:java.NativeArray<Int>):Void {})
 /**
  * Removes the items from the receiver which are
  * between the given zero-relative start and end 
@@ -122,6 +119,9 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  * </ul>
  */
 	public function remove(start:Int,end:Int):Void;
+	@:overload(function (index:Int):Void {})
+	@:overload(function (string:String):Void {})
+	@:overload(function (indices:java.NativeArray<Int>):Void {})
 /**
  * Returns the number of selected items contained in the receiver.
  *
@@ -148,7 +148,6 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  * @see List#deselectAll()
  * @see List#select(int)
  */
-	@:overload(function (index:Int):Void {})
 /**
  * Selects the items at the given zero-relative indices in the receiver.
  * The current selection is cleared before the new items are selected.
@@ -170,7 +169,6 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  * @see List#deselectAll()
  * @see List#select(int[])
  */
-	@:overload(function (indices:java.NativeArray<Int>):Void {})
 /**
  * Sets the receiver's selection to be the given array of items.
  * The current selection is cleared before the new items are selected.
@@ -193,7 +191,6 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  * @see List#select(int[])
  * @see List#setSelection(int[])
  */
-	@:overload(function (items:java.NativeArray<String>):Void {})
 /**
  * Selects the items in the range specified by the given zero-relative
  * indices in the receiver. The range of indices is inclusive.
@@ -216,6 +213,9 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  * @see List#select(int,int)
  */
 	public function setSelection(start:Int,end:Int):Void;
+	@:overload(function (index:Int):Void {})
+	@:overload(function (indices:java.NativeArray<Int>):Void {})
+	@:overload(function (items:java.NativeArray<String>):Void {})
 /**
  * Deselects the item at the given zero-relative index in the receiver.
  * If the item at the index was already deselected, it remains
@@ -228,7 +228,6 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (index:Int):Void {})
 /**
  * Deselects the items at the given zero-relative indices in the receiver.
  * If the item at the given zero-relative index in the receiver 
@@ -246,7 +245,6 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (indices:java.NativeArray<Int>):Void {})
 /**
  * Deselects the items at the given zero-relative indices in the receiver.
  * If the item at the given zero-relative index in the receiver 
@@ -263,6 +261,8 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  * </ul>
  */
 	public function deselect(start:Int,end:Int):Void;
+	@:overload(function (index:Int):Void {})
+	@:overload(function (indices:java.NativeArray<Int>):Void {})
 /**
  * Gets the index of an item.
  * <p>
@@ -282,7 +282,6 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (string:String):Int {})
 /**
  * Searches the receiver's list starting at the given, 
  * zero-relative index until an item is found that is equal
@@ -303,6 +302,7 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  * </ul>
  */
 	public function indexOf(string:String,start:Int):Int;
+	@:overload(function (string:String):Int {})
 /**
  * Adds the argument to the end of the receiver's list.
  *
@@ -318,7 +318,6 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  *
  * @see #add(String,int)
  */
-	@:overload(function (string:String):Void {})
 /**
  * Adds the argument to the receiver's list at the given
  * zero-relative index.
@@ -343,6 +342,7 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  * @see #add(String)
  */
 	public function add(string:String,index:Int):Void;
+	@:overload(function (string:String):Void {})
 /**
  * Sets the text of the item in the receiver's list at the given
  * zero-relative index to the string argument.
@@ -458,7 +458,6 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (index:Int):Void {})
 /**
  * Selects the items at the given zero-relative indices in the receiver.
  * The current selection is not cleared before the new items are selected.
@@ -481,7 +480,6 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  * 
  * @see List#setSelection(int[])
  */
-	@:overload(function (indices:java.NativeArray<Int>):Void {})
 /**
  * Selects the items in the range specified by the given zero-relative
  * indices in the receiver. The range of indices is inclusive.
@@ -505,6 +503,8 @@ extern class List extends org.eclipse.swt.widgets.Scrollable
  * @see List#setSelection(int,int)
  */
 	public function select(start:Int,end:Int):Void;
+	@:overload(function (index:Int):Void {})
+	@:overload(function (indices:java.NativeArray<Int>):Void {})
 /**
  * Returns the number of items contained in the receiver.
  *

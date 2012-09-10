@@ -23,8 +23,8 @@ extern class NSWindow extends org.eclipse.swt.internal.cocoa.NSResponder
 	public function setOpaque(isOpaque:Bool):Void;
 	public function level():haxe.Int64;
 	public function makeFirstResponder(aResponder:org.eclipse.swt.internal.cocoa.NSResponder):Bool;
-	@:overload(function (contentRect:org.eclipse.swt.internal.cocoa.NSRect,aStyle:haxe.Int64,bufferingType:haxe.Int64,flag:Bool):org.eclipse.swt.internal.cocoa.NSWindow {})
 	public function initWithContentRect(contentRect:org.eclipse.swt.internal.cocoa.NSRect,aStyle:haxe.Int64,bufferingType:haxe.Int64,flag:Bool,screen:org.eclipse.swt.internal.cocoa.NSScreen):org.eclipse.swt.internal.cocoa.NSWindow;
+	@:overload(function (contentRect:org.eclipse.swt.internal.cocoa.NSRect,aStyle:haxe.Int64,bufferingType:haxe.Int64,flag:Bool):org.eclipse.swt.internal.cocoa.NSWindow {})
 	static public function windowNumberAtPoint(point:org.eclipse.swt.internal.cocoa.NSPoint,windowNumber:haxe.Int64):haxe.Int64;
 	public function orderFront(sender:org.eclipse.swt.internal.cocoa.Id):Void;
 	public function deminiaturize(sender:org.eclipse.swt.internal.cocoa.Id):Void;
@@ -83,8 +83,8 @@ extern class NSWindow extends org.eclipse.swt.internal.cocoa.NSResponder
 	public function contentView():org.eclipse.swt.internal.cocoa.NSView;
 	public function setBackgroundColor(color:org.eclipse.swt.internal.cocoa.NSColor):Void;
 	public function disableFlushWindow():Void;
-	@:overload(function (frameRect:org.eclipse.swt.internal.cocoa.NSRect,flag:Bool):Void {})
 	public function setFrame(frameRect:org.eclipse.swt.internal.cocoa.NSRect,displayFlag:Bool,animateFlag:Bool):Void;
+	@:overload(function (frameRect:org.eclipse.swt.internal.cocoa.NSRect,flag:Bool):Void {})
 	public function isKeyWindow():Bool;
 	public function windowRef():haxe.Int64;
 	public function setDelegate(anObject:org.eclipse.swt.internal.cocoa.Id):Void;

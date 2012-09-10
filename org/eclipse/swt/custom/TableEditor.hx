@@ -67,7 +67,6 @@ extern class TableEditor extends org.eclipse.swt.custom.ControlEditor
  * @param table the Table Control above which this editor will be displayed
  */
 	public function new(table:org.eclipse.swt.widgets.Table):Void;
-	@:overload(function (editor:org.eclipse.swt.widgets.Control):Void {})
 /**
  * Specify the Control that is to be displayed and the cell in the table that it is to be positioned above.
  *
@@ -78,7 +77,8 @@ extern class TableEditor extends org.eclipse.swt.custom.ControlEditor
  * @param item the TableItem for the row of the cell being tracked by this editor
  * @param column the zero based index of the column of the cell being tracked by this editor
  */
-	public function setEditor(editor:org.eclipse.swt.widgets.Control,item:org.eclipse.swt.widgets.TableItem,column:Int):Void;
+	//override public function setEditor(editor:org.eclipse.swt.widgets.Control):Void;
+	@:overload(function (editor:org.eclipse.swt.widgets.Control):Void {})
 /**
  * Returns the TableItem for the row of the cell being tracked by this editor.
  *

@@ -16,10 +16,10 @@ extern class NSObject extends org.eclipse.swt.internal.cocoa.Id
 	public function useCredential(credential:org.eclipse.swt.internal.cocoa.NSURLCredential,challenge:org.eclipse.swt.internal.cocoa.NSURLAuthenticationChallenge):Void;
 	public function performSelectorOnMainThread(aSelector:haxe.Int64,arg:org.eclipse.swt.internal.cocoa.Id,wait:Bool):Void;
 	public function respondsToSelector(aSelector:haxe.Int64):Bool;
+	public function outlineView(outlineView:org.eclipse.swt.internal.cocoa.NSOutlineView,cell:org.eclipse.swt.internal.cocoa.NSCell,tableColumn:org.eclipse.swt.internal.cocoa.NSTableColumn,item:org.eclipse.swt.internal.cocoa.Id):Bool;
 	@:overload(function (outlineView:org.eclipse.swt.internal.cocoa.NSOutlineView,item:org.eclipse.swt.internal.cocoa.Id):Bool {})
 	@:overload(function (outlineView:org.eclipse.swt.internal.cocoa.NSOutlineView,tableColumn:org.eclipse.swt.internal.cocoa.NSTableColumn,item:org.eclipse.swt.internal.cocoa.Id):Bool {})
 	@:overload(function (outlineView:org.eclipse.swt.internal.cocoa.NSOutlineView,columnIndex:haxe.Int64,newColumnIndex:haxe.Int64):Bool {})
-	public function outlineView(outlineView:org.eclipse.swt.internal.cocoa.NSOutlineView,cell:org.eclipse.swt.internal.cocoa.NSCell,tableColumn:org.eclipse.swt.internal.cocoa.NSTableColumn,item:org.eclipse.swt.internal.cocoa.Id):Bool;
 	public function isEqualTo(object:org.eclipse.swt.internal.cocoa.Id):Bool;
 	public function draggingPasteboard():org.eclipse.swt.internal.cocoa.NSPasteboard;
 	public function description():org.eclipse.swt.internal.cocoa.NSString;
@@ -35,9 +35,9 @@ extern class NSObject extends org.eclipse.swt.internal.cocoa.Id
 	public function retainCount():haxe.Int64;
 	public function draggingSourceOperationMask():haxe.Int64;
 	public function draggingLocation():org.eclipse.swt.internal.cocoa.NSPoint;
+	public function tableView(tableView:org.eclipse.swt.internal.cocoa.NSTableView,cell:org.eclipse.swt.internal.cocoa.NSCell,tableColumn:org.eclipse.swt.internal.cocoa.NSTableColumn,row:haxe.Int64):Bool;
 	@:overload(function (tableView:org.eclipse.swt.internal.cocoa.NSTableView,row:haxe.Int64):Bool {})
 	@:overload(function (tableView:org.eclipse.swt.internal.cocoa.NSTableView,columnIndex:haxe.Int64,newColumnIndex:haxe.Int64):Bool {})
-	public function tableView(tableView:org.eclipse.swt.internal.cocoa.NSTableView,cell:org.eclipse.swt.internal.cocoa.NSCell,tableColumn:org.eclipse.swt.internal.cocoa.NSTableColumn,row:haxe.Int64):Bool;
 	public function superclass():haxe.Int64;
 	public function readSelectionFromPasteboard(pboard:org.eclipse.swt.internal.cocoa.NSPasteboard):Bool;
 	public function isEqual(object:org.eclipse.swt.internal.cocoa.Id):Bool;

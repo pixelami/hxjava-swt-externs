@@ -83,7 +83,6 @@ extern class ToolBar extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (index:Int):org.eclipse.swt.widgets.ToolItem {})
 /**
  * Returns the item at the given point in the receiver
  * or null if no such item exists. The point is in the
@@ -101,6 +100,7 @@ extern class ToolBar extends org.eclipse.swt.widgets.Composite
  * </ul>
  */
 	public function getItem(point:org.eclipse.swt.graphics.Point):org.eclipse.swt.widgets.ToolItem;
+	@:overload(function (index:Int):org.eclipse.swt.widgets.ToolItem {})
 /**
  * Returns an array of <code>ToolItem</code>s which are the items
  * in the receiver. 

@@ -13,7 +13,7 @@ extern class NSFileManager extends org.eclipse.swt.internal.cocoa.NSObject
 	public function isExecutableFileAtPath(path:org.eclipse.swt.internal.cocoa.NSString):Bool;
 	public function createFileAtPath(path:org.eclipse.swt.internal.cocoa.NSString,data:org.eclipse.swt.internal.cocoa.NSData,attr:org.eclipse.swt.internal.cocoa.NSDictionary):Bool;
 	public function removeItemAtPath(path:org.eclipse.swt.internal.cocoa.NSString,error:haxe.Int64):Bool;
-	@:overload(function (path:org.eclipse.swt.internal.cocoa.NSString):Bool {})
 	public function fileExistsAtPath(path:org.eclipse.swt.internal.cocoa.NSString,isDirectory:haxe.Int64):Bool;
+	@:overload(function (path:org.eclipse.swt.internal.cocoa.NSString):Bool {})
 
 }

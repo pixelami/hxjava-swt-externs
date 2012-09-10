@@ -82,7 +82,6 @@ extern class Program
  *    <li>ERROR_NULL_ARGUMENT when fileName is null</li>
  * </ul>
  */
-	@:overload(function (fileName:String):Bool {})
 /**
  * Launches the operating system executable associated with the file or
  * URL (http:// or https://).  If the file is an executable then the
@@ -103,6 +102,7 @@ extern class Program
  * @since 3.6
  */
 	static public function launch(fileName:String,workingDir:String):Bool;
+	@:overload(function (fileName:String):Bool {})
 /**
  * Returns an integer hash code for the receiver. Any two 
  * objects that return <code>true</code> when passed to 

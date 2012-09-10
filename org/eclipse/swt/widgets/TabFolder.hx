@@ -91,7 +91,6 @@ extern class TabFolder extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (index:Int):Void {})
 /**
  * Sets the receiver's selection to the given item.
  * The current selected is first cleared, then the new item is
@@ -109,7 +108,6 @@ extern class TabFolder extends org.eclipse.swt.widgets.Composite
  * 
  * @since 3.2
  */
-	@:overload(function (item:org.eclipse.swt.widgets.TabItem):Void {})
 /**
  * Sets the receiver's selection to be the given array of items.
  * The current selected is first cleared, then the new items are
@@ -126,6 +124,8 @@ extern class TabFolder extends org.eclipse.swt.widgets.Composite
  * </ul>
  */
 	public function setSelection(items:java.NativeArray<org.eclipse.swt.widgets.TabItem>):Void;
+	@:overload(function (index:Int):Void {})
+	@:overload(function (item:org.eclipse.swt.widgets.TabItem):Void {})
 /**
  * Adds the listener to the collection of listeners who will
  * be notified when the user changes the receiver's selection, by sending
@@ -204,7 +204,6 @@ extern class TabFolder extends org.eclipse.swt.widgets.Composite
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (index:Int):org.eclipse.swt.widgets.TabItem {})
 /**
  * Returns the tab item at the given point in the receiver
  * or null if no such item exists. The point is in the
@@ -224,6 +223,7 @@ extern class TabFolder extends org.eclipse.swt.widgets.Composite
  * @since 3.4
  */
 	public function getItem(point:org.eclipse.swt.graphics.Point):org.eclipse.swt.widgets.TabItem;
+	@:overload(function (index:Int):org.eclipse.swt.widgets.TabItem {})
 /**
  * Returns an array of <code>TabItem</code>s which are the items
  * in the receiver. 

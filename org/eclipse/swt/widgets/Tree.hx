@@ -169,7 +169,6 @@ extern class Tree extends org.eclipse.swt.widgets.Composite
  * 
  * @since 3.2
  */
-	@:overload(function (item:org.eclipse.swt.widgets.TreeItem):Void {})
 /**
  * Sets the receiver's selection to be the given array of items.
  * The current selection is cleared before the new items are selected.
@@ -193,6 +192,7 @@ extern class Tree extends org.eclipse.swt.widgets.Composite
  * @see Tree#deselectAll()
  */
 	public function setSelection(items:java.NativeArray<org.eclipse.swt.widgets.TreeItem>):Void;
+	@:overload(function (item:org.eclipse.swt.widgets.TreeItem):Void {})
 /**
  * Returns the number of selected items contained in the receiver.
  *
@@ -241,7 +241,6 @@ extern class Tree extends org.eclipse.swt.widgets.Composite
  * 
  * @since 3.1
  */
-	@:overload(function (column:org.eclipse.swt.widgets.TreeColumn):Int {})
 /**
  * Searches the receiver's list starting at the first item
  * (index 0) until an item is found that is equal to the 
@@ -263,6 +262,7 @@ extern class Tree extends org.eclipse.swt.widgets.Composite
  * @since 3.1
  */
 	public function indexOf(item:org.eclipse.swt.widgets.TreeItem):Int;
+	@:overload(function (column:org.eclipse.swt.widgets.TreeColumn):Int {})
 /**
  * Returns the direction of the sort indicator for the receiver. 
  * The value will be one of <code>UP</code>, <code>DOWN</code> 
@@ -430,7 +430,6 @@ extern class Tree extends org.eclipse.swt.widgets.Composite
  * 
  * @since 3.1
  */
-	@:overload(function (index:Int):org.eclipse.swt.widgets.TreeItem {})
 /**
  * Returns the item at the given point in the receiver
  * or null if no such item exists. The point is in the
@@ -455,6 +454,7 @@ extern class Tree extends org.eclipse.swt.widgets.Composite
  * </ul>
  */
 	public function getItem(point:org.eclipse.swt.graphics.Point):org.eclipse.swt.widgets.TreeItem;
+	@:overload(function (index:Int):org.eclipse.swt.widgets.TreeItem {})
 /**
  * Shows the column.  If the column is already showing in the receiver,
  * this method simply returns.  Otherwise, the columns are scrolled until

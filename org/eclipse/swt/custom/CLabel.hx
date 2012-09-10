@@ -226,7 +226,6 @@ extern class CLabel extends org.eclipse.swt.widgets.Canvas
  * @since 3.6
  */
 	public function getLeftMargin():Int;
-	@:overload(function (color:org.eclipse.swt.graphics.Color):Void {})
 /**
  * Set the image to be drawn in the background of the label.
  * 
@@ -237,7 +236,6 @@ extern class CLabel extends org.eclipse.swt.widgets.Canvas
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (image:org.eclipse.swt.graphics.Image):Void {})
 /**
  * Specify a gradient of colours to be drawn in the background of the CLabel.
  * <p>For example, to draw a gradient that varies from dark blue to blue and then to
@@ -265,7 +263,6 @@ extern class CLabel extends org.eclipse.swt.widgets.Canvas
  *    <li>ERROR_INVALID_ARGUMENT - if the values of colors and percents are not consistent</li>
  * </ul>
  */
-	@:overload(function (colors:java.NativeArray<org.eclipse.swt.graphics.Color>,percents:java.NativeArray<Int>):Void {})
 /**
  * Specify a gradient of colours to be drawn in the background of the CLabel.
  * <p>For example, to draw a gradient that varies from dark blue to white in the vertical,
@@ -294,7 +291,10 @@ extern class CLabel extends org.eclipse.swt.widgets.Canvas
  * 
  * @since 3.0
  */
-	public function setBackground(colors:java.NativeArray<org.eclipse.swt.graphics.Color>,percents:java.NativeArray<Int>,vertical:Bool):Void;
+	//override public function setBackground(color:org.eclipse.swt.graphics.Color):Void;
+	@:overload(function (color:org.eclipse.swt.graphics.Color):Void {})
+	@:overload(function (image:org.eclipse.swt.graphics.Image):Void {})
+	@:overload(function (colors:java.NativeArray<org.eclipse.swt.graphics.Color>,percents:java.NativeArray<Int>):Void {})
 /**
  * Set the horizontal alignment of the CLabel.
  * Use the values LEFT, CENTER and RIGHT to align image and text within the available space.

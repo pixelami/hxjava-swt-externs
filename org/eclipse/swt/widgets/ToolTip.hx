@@ -188,7 +188,6 @@ extern class ToolTip extends org.eclipse.swt.widgets.Widget
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (location:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Sets the location of the receiver, which must be a tooltip,
  * to the point specified by the arguments which are relative
@@ -207,6 +206,7 @@ extern class ToolTip extends org.eclipse.swt.widgets.Widget
  * </ul>
  */
 	public function setLocation(x:Int,y:Int):Void;
+	@:overload(function (location:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Returns the receiver's text, which will be an empty
  * string if it has never been set.

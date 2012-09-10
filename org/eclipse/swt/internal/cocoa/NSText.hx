@@ -18,8 +18,7 @@ extern class NSText extends org.eclipse.swt.internal.cocoa.NSView
 	public function setMinSize(newMinSize:org.eclipse.swt.internal.cocoa.NSSize):Void;
 	public function scrollRangeToVisible(range:org.eclipse.swt.internal.cocoa.NSRange):Void;
 	public function selectedRange():org.eclipse.swt.internal.cocoa.NSRange;
-    @:overload( function (sender:org.eclipse.swt.internal.cocoa.Id):Void {} )
-    override public function copy():org.eclipse.swt.internal.cocoa.Id;
+	public function copy(sender:org.eclipse.swt.internal.cocoa.Id):Void;
 	public function setSelectedRange(range:org.eclipse.swt.internal.cocoa.NSRange):Void;
 	public function font():org.eclipse.swt.internal.cocoa.NSFont;
 	public function setFont(obj:org.eclipse.swt.internal.cocoa.NSFont):Void;

@@ -9,8 +9,8 @@ extern class NSString extends org.eclipse.swt.internal.cocoa.NSObject
 	public function new(id:org.eclipse.swt.internal.cocoa.Id):Void;
 	public function stringByAppendingPathComponent(str:org.eclipse.swt.internal.cocoa.NSString):org.eclipse.swt.internal.cocoa.NSString;
 	public function stringByAppendingPathExtension(str:org.eclipse.swt.internal.cocoa.NSString):org.eclipse.swt.internal.cocoa.NSString;
-	@:overload(function (buffer:java.NativeArray<Char16>):Void {})
 	public function getCharacters(buffer:java.NativeArray<Char16>,aRange:org.eclipse.swt.internal.cocoa.NSRange):Void;
+	@:overload(function (buffer:java.NativeArray<Char16>):Void {})
 	static public function stringWith(str:String):org.eclipse.swt.internal.cocoa.NSString;
 	public function initWithCharacters(characters:java.NativeArray<Char16>,length:haxe.Int64):org.eclipse.swt.internal.cocoa.NSString;
 	public function UTF8String():haxe.Int64;

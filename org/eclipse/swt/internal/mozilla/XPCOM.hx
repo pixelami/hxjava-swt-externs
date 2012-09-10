@@ -122,26 +122,26 @@ extern class XPCOM extends org.eclipse.swt.internal.C
 	inline static public var JS_FALSE:Int = 0;
 	inline static public var JS_TRUE:Int = 1;
 	public function new():Void;
-	@:overload(function (dest:haxe.Int64,src:java.NativeArray<Bool>):Void {})
-	@:overload(function (dest:java.NativeArray<Bool>,src:haxe.Int64):Void {})
 /**
  * @param dest cast=(void *)
  * @param src cast=(const void *),flags=no_out critical
  * @param size cast=(size_t)
  */
-	@:overload(function (dest:haxe.Int64,src:org.eclipse.swt.internal.mozilla.NsDynamicFunctionLoad,size:haxe.Int64):Void {})
 /**
  * @param dest cast=(void *)
  * @param src cast=(const void *)
  * @param nbytes cast=(size_t)
  */
-	@:overload(function (dest:haxe.Int64,src:org.eclipse.swt.internal.mozilla.NsID,nbytes:Int):Void {})
 /**
  * @param dest cast=(void *)
  * @param src cast=(const void *)
  * @param nbytes cast=(size_t)
  */
 	static public function memmove(dest:org.eclipse.swt.internal.mozilla.NsID,src:haxe.Int64,nbytes:Int):Void;
+	@:overload(function (dest:haxe.Int64,src:java.NativeArray<Bool>):Void {})
+	@:overload(function (dest:java.NativeArray<Bool>,src:haxe.Int64):Void {})
+	@:overload(function (dest:haxe.Int64,src:org.eclipse.swt.internal.mozilla.NsDynamicFunctionLoad,size:haxe.Int64):Void {})
+	@:overload(function (dest:haxe.Int64,src:org.eclipse.swt.internal.mozilla.NsID,nbytes:Int):Void {})
 	static public function XPCOMGlueLoadXULFunctions(functionLoad:haxe.Int64):Int;
 	static public function nsIScriptGlobalObject_EnsureScriptEnvironment(ptr:haxe.Int64,lang:Int):Int;
 	static public function nsDynamicFunctionLoad_sizeof():Int;
@@ -159,17 +159,17 @@ extern class XPCOM extends org.eclipse.swt.internal.C
 	static public function JS_NewObject(mozillaPath:java.NativeArray<Int8>,cx:haxe.Int64,clasp:haxe.Int64,proto:haxe.Int64,parent:haxe.Int64):haxe.Int64;
 	static public function JS_EvaluateUCScriptForPrincipals(mozillaPath:java.NativeArray<Int8>,cx:haxe.Int64,obj:haxe.Int64,principals:haxe.Int64,chars:java.NativeArray<Char16>,length:Int,filename:java.NativeArray<Int8>,lineno:Int,retVal:java.NativeArray<haxe.Int64>):Int;
 /** @method flags=new  */
-	@:overload(function ():haxe.Int64 {})
 /**
  * @method flags=new
  * @param aString cast=(const char *)
  */
-	@:overload(function (aString:haxe.Int64,length:Int):haxe.Int64 {})
 /**
  * @method flags=new
  * @param aString cast=(const char *)
  */
 	static public function _nsEmbedCString_new(aString:java.NativeArray<Int8>,length:Int):haxe.Int64;
+	@:overload(function ():haxe.Int64 {})
+	@:overload(function (aString:haxe.Int64,length:Int):haxe.Int64 {})
 /**
  * @method flags=cpp
  * @param ptr cast=(nsID *)
@@ -178,10 +178,10 @@ extern class XPCOM extends org.eclipse.swt.internal.C
 	static public function _nsID_Equals(ptr:haxe.Int64,other:haxe.Int64):Int;
 /** @method flags=no_gen  */
 	static public function _JS_GetGlobalObject(mozillaPath:java.NativeArray<Int8>,cx:haxe.Int64):haxe.Int64;
+	static public function Call(ptr:haxe.Int64,aInStream:haxe.Int64,aClosure:haxe.Int64,aFromSegment:java.NativeArray<Int8>,aToOffset:Int,aCount:Int,aWriteCount:java.NativeArray<Int>):haxe.Int64;
 	@:overload(function (ptr:haxe.Int64):Int {})
 	@:overload(function (ptr:haxe.Int64,aLibXULDirectory:haxe.Int64,aAppDirectory:haxe.Int64,aAppDirProvider:haxe.Int64):Int {})
 	@:overload(function (ptr:haxe.Int64,aLibXULDirectory:haxe.Int64,aAppDirectory:haxe.Int64,aAppDirProvider:haxe.Int64,aStaticComponents:haxe.Int64,aStaticComponentsCount:Int):Int {})
-	static public function Call(ptr:haxe.Int64,aInStream:haxe.Int64,aClosure:haxe.Int64,aFromSegment:java.NativeArray<Int8>,aToOffset:Int,aCount:Int,aWriteCount:java.NativeArray<Int>):haxe.Int64;
 /** @param result cast=(nsIServiceManager**)  */
 	static public function _NS_GetServiceManager(result:java.NativeArray<haxe.Int64>):Int;
 /** @param result cast=(nsIComponentManager**)  */
@@ -238,12 +238,12 @@ extern class XPCOM extends org.eclipse.swt.internal.C
  */
 	static public function _nsIScriptGlobalObject_GetScriptContext(ptr:haxe.Int64,lang:Int):haxe.Int64;
 /** @method flags=new  */
-	@:overload(function ():haxe.Int64 {})
 /**
  * @method flags=new
  * @param aString cast=(PRUnichar *)
  */
 	static public function _nsEmbedString_new(aString:java.NativeArray<Char16>):haxe.Int64;
+	@:overload(function ():haxe.Int64 {})
 	static public function nsIMemory_Alloc(ptr:haxe.Int64,size:Int):haxe.Int64;
 	static public function nsID_delete(ptr:haxe.Int64):Void;
 /** @method flags=no_gen  */
@@ -254,9 +254,9 @@ extern class XPCOM extends org.eclipse.swt.internal.C
 	static public function NS_NewLocalFile(path:haxe.Int64,followLinks:Int,result:java.NativeArray<haxe.Int64>):Int;
 	static public function XPCOMGlueStartup(place:java.NativeArray<Int8>):Int;
 	static public function nsEmbedCString_get(ptr:haxe.Int64):haxe.Int64;
+	static public function nsEmbedCString_new(aString:java.NativeArray<Int8>,length:Int):haxe.Int64;
 	@:overload(function ():haxe.Int64 {})
 	@:overload(function (aString:haxe.Int64,length:Int):haxe.Int64 {})
-	static public function nsEmbedCString_new(aString:java.NativeArray<Int8>,length:Int):haxe.Int64;
 	static public function NS_GetComponentManager(result:java.NativeArray<haxe.Int64>):Int;
 /**
  * @method flags=delete
@@ -273,14 +273,12 @@ extern class XPCOM extends org.eclipse.swt.internal.C
  */
 	static public function _nsEmbedCString_get(ptr:haxe.Int64):haxe.Int64;
 	static public function JS_GetGlobalObject(mozillaPath:java.NativeArray<Int8>,cx:haxe.Int64):haxe.Int64;
-	@:overload(function (ptr:haxe.Int64):Int {})
 /**
  * @param ptr cast=(SWT_XREInitEmbedding2)
  * @param aLibXULDirectory cast=(nsILocalFile *)
  * @param aAppDirectory cast=(nsILocalFile *)
  * @param aAppDirProvider cast=(nsIDirectoryServiceProvider *)
  */
-	@:overload(function (ptr:haxe.Int64,aLibXULDirectory:haxe.Int64,aAppDirectory:haxe.Int64,aAppDirProvider:haxe.Int64):Int {})
 /**
  * @param ptr cast=(SWT_XREInitEmbedding)
  * @param aLibXULDirectory cast=(nsILocalFile *)
@@ -288,7 +286,6 @@ extern class XPCOM extends org.eclipse.swt.internal.C
  * @param aAppDirProvider cast=(nsIDirectoryServiceProvider *)
  * @param aStaticComponents cast=(nsStaticModuleInfo const *)
  */
-	@:overload(function (ptr:haxe.Int64,aLibXULDirectory:haxe.Int64,aAppDirectory:haxe.Int64,aAppDirProvider:haxe.Int64,aStaticComponents:haxe.Int64,aStaticComponentsCount:Int):Int {})
 /**
  * @param ptr cast=(nsWriteSegmentFun)
  * @param aInStream cast=(nsIInputStream *)
@@ -297,10 +294,13 @@ extern class XPCOM extends org.eclipse.swt.internal.C
  * @param aWriteCount cast=(PRUint32 *)
  */
 	static public function _Call(ptr:haxe.Int64,aInStream:haxe.Int64,aClosure:haxe.Int64,aFromSegment:java.NativeArray<Int8>,aToOffset:Int,aCount:Int,aWriteCount:java.NativeArray<Int>):haxe.Int64;
+	@:overload(function (ptr:haxe.Int64):Int {})
+	@:overload(function (ptr:haxe.Int64,aLibXULDirectory:haxe.Int64,aAppDirectory:haxe.Int64,aAppDirProvider:haxe.Int64):Int {})
+	@:overload(function (ptr:haxe.Int64,aLibXULDirectory:haxe.Int64,aAppDirectory:haxe.Int64,aAppDirProvider:haxe.Int64,aStaticComponents:haxe.Int64,aStaticComponentsCount:Int):Int {})
 	static public function NS_Free(mozillaPath:java.NativeArray<Int8>,aPtr:haxe.Int64):Bool;
 	static public function nsID_new():haxe.Int64;
-	@:overload(function ():haxe.Int64 {})
 	static public function nsEmbedString_new(aString:java.NativeArray<Char16>):haxe.Int64;
+	@:overload(function ():haxe.Int64 {})
 /**
  * @method flags=cpp
  * @param ptr cast=(nsEmbedString *)

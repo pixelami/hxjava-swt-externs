@@ -155,7 +155,6 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (point:org.eclipse.swt.graphics.Point):org.eclipse.swt.graphics.Point {})
 /**
  * Returns a point which is the result of converting the
  * argument, which is specified in display relative coordinates,
@@ -173,6 +172,7 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  * @since 2.1
  */
 	public function toControl(x:Int,y:Int):org.eclipse.swt.graphics.Point;
+	@:overload(function (point:org.eclipse.swt.graphics.Point):org.eclipse.swt.graphics.Point {})
 /**
  * Returns <code>true</code> if the receiver has the user-interface
  * focus, and <code>false</code> otherwise.
@@ -201,7 +201,6 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (point:org.eclipse.swt.graphics.Point):org.eclipse.swt.graphics.Point {})
 /**
  * Returns a point which is the result of converting the
  * argument, which is specified in coordinates relative to
@@ -219,6 +218,7 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  * @since 2.1
  */
 	public function toDisplay(x:Int,y:Int):org.eclipse.swt.graphics.Point;
+	@:overload(function (point:org.eclipse.swt.graphics.Point):org.eclipse.swt.graphics.Point {})
 /**
  * Sets the receiver's tool tip text to the argument, which
  * may be null indicating that the default tool tip for the 
@@ -292,7 +292,6 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  *
  * @see #computeSize(int, int, boolean)
  */
-	@:overload(function ():Void {})
 /**
  * Causes the receiver to be resized to its preferred size.
  * For a composite, this involves computing the preferred size
@@ -315,6 +314,7 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  * @see #computeSize(int, int, boolean)
  */
 	public function pack(changed:Bool):Void;
+	@:overload(function ():Void {})
 /**
  * Returns <code>true</code> if the receiver is detecting
  * drag gestures, and  <code>false</code> otherwise. 
@@ -356,7 +356,6 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (location:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Sets the receiver's location to the point specified by
  * the arguments which are relative to the receiver's
@@ -373,6 +372,7 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  * </ul>
  */
 	public function setLocation(x:Int,y:Int):Void;
+	@:overload(function (location:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Returns the preferred size of the receiver.
  * <p>
@@ -400,7 +400,6 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  * @see #pack(boolean)
  * @see "computeTrim, getClientArea for controls that implement them"
  */
-	@:overload(function (wHint:Int,hHint:Int):org.eclipse.swt.graphics.Point {})
 /**
  * Returns the preferred size of the receiver.
  * <p>
@@ -436,6 +435,7 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  * @see "computeTrim, getClientArea for controls that implement them"
  */
 	public function computeSize(wHint:Int,hHint:Int,changed:Bool):org.eclipse.swt.graphics.Point;
+	@:overload(function (wHint:Int,hHint:Int):org.eclipse.swt.graphics.Point {})
 /**
  * Adds the listener to the collection of listeners who will
  * be notified when the mouse wheel is scrolled, by sending
@@ -989,7 +989,6 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (traversal:Int):Bool {})
 /**
  * Performs a platform traversal action corresponding to a <code>KeyDown</code> event.
  * 
@@ -1022,7 +1021,6 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  *
  * @since 3.6
  */
-	@:overload(function (traversal:Int,event:org.eclipse.swt.events.KeyEvent):Bool {})
 /**
  * Performs a platform traversal action corresponding to a <code>KeyDown</code> event.
  * 
@@ -1056,6 +1054,8 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  * @since 3.6
  */
 	public function traverse(traversal:Int,event:org.eclipse.swt.widgets.Event):Bool;
+	@:overload(function (traversal:Int):Bool {})
+	@:overload(function (traversal:Int,event:org.eclipse.swt.events.KeyEvent):Bool {})
 /**
  * If the argument is <code>true</code>, causes the receiver to have
  * all mouse events delivered to it until the method is called with
@@ -1134,7 +1134,6 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  * @see SWT#NO_MERGE_PAINTS
  * @see SWT#DOUBLE_BUFFERED
  */
-	@:overload(function ():Void {})
 /**
  * Causes the rectangular area of the receiver specified by
  * the arguments to be marked as needing to be redrawn. 
@@ -1166,6 +1165,7 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  * @see SWT#DOUBLE_BUFFERED
  */
 	public function redraw(x:Int,y:Int,width:Int,height:Int,all:Bool):Void;
+	@:overload(function ():Void {})
 /**
  * Returns <code>true</code> if this control is set to send touch events, or
  * <code>false</code> if it is set to send gesture events instead.  This method
@@ -1419,7 +1419,6 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (size:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Sets the receiver's size to the point specified by the arguments.
  * <p>
@@ -1437,6 +1436,7 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  * </ul>
  */
 	public function setSize(width:Int,height:Int):Void;
+	@:overload(function (size:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Sets the receiver's background image to the image specified
  * by the argument, or to the default system color for the control
@@ -1596,7 +1596,6 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
 /**
  * Sets the receiver's size and location to the rectangular
  * area specified by the arguments. The <code>x</code> and 
@@ -1621,6 +1620,7 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  * </ul>
  */
 	public function setBounds(x:Int,y:Int,width:Int,height:Int):Void;
+	@:overload(function (rect:org.eclipse.swt.graphics.Rectangle):Void {})
 /**
  * Removes the listener from the collection of listeners who will
  * be notified when the help events are generated for the control.
@@ -1693,7 +1693,6 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  * 
  * @since 3.3
  */
-	@:overload(function (event:org.eclipse.swt.events.MouseEvent):Bool {})
 /**
  * Detects a drag and drop gesture.  This method is used
  * to detect a drag gesture when called from within a mouse
@@ -1731,6 +1730,7 @@ extern class Control extends org.eclipse.swt.widgets.Widget , implements org.ecl
  * @since 3.3
  */
 	public function dragDetect(event:org.eclipse.swt.widgets.Event):Bool;
+	@:overload(function (event:org.eclipse.swt.events.MouseEvent):Bool {})
 /**
  * Returns <code>true</code> if the underlying operating
  * system supports this reparenting, otherwise <code>false</code>

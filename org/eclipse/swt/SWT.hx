@@ -3520,7 +3520,6 @@ extern class SWT
  *
  * @param code the SWT error code
  */
-	@:overload(function (code:Int):Void {})
 /**
  * Throws an appropriate exception based on the passed in error code.
  * The <code>throwable</code> argument should be either null, or the
@@ -3546,7 +3545,6 @@ extern class SWT
  * @see SWTException
  * @see IllegalArgumentException
  */
-	@:overload(function (code:Int,throwable:java.lang.Throwable):Void {})
 /**
  * Throws an appropriate exception based on the passed in error code.
  * The <code>throwable</code> argument should be either null, or the
@@ -3576,6 +3574,8 @@ extern class SWT
  * @since 3.0
  */
 	static public function error(code:Int,throwable:java.lang.Throwable,detail:String):Void;
+	@:overload(function (code:Int):Void {})
+	@:overload(function (code:Int,throwable:java.lang.Throwable):Void {})
 /**
  * Returns the NLS'ed message for the given argument.
  * 
@@ -3586,7 +3586,6 @@ extern class SWT
  *    <li>ERROR_NULL_ARGUMENT - if the key is null</li>
  * </ul>
  */
-	@:overload(function (key:String):String {})
 /**
  * Returns the NLS'ed message for the given arguments.
  * 
@@ -3601,6 +3600,7 @@ extern class SWT
  * @since 3.8
  */
 	static public function getMessage(key:String,args:java.NativeArray<Dynamic>):String;
+	@:overload(function (key:String):String {})
 /**
  * Returns a boolean indicating whether this SWT implementation can
  * be loaded.  Examples of criteria that may be used to determine this

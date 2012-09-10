@@ -98,7 +98,6 @@ extern class CoolItem extends org.eclipse.swt.widgets.Item
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (size:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Sets the receiver's ideal size to the point specified by the arguments.
  *
@@ -111,6 +110,7 @@ extern class CoolItem extends org.eclipse.swt.widgets.Item
  * </ul>
  */
 	public function setPreferredSize(width:Int,height:Int):Void;
+	@:overload(function (size:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Sets the receiver's size to the point specified by the argument.
  * <p>
@@ -129,7 +129,6 @@ extern class CoolItem extends org.eclipse.swt.widgets.Item
  *    <li>ERROR_THREAD_INVALID_ACCESS - if not called from the thread that created the receiver</li>
  * </ul>
  */
-	@:overload(function (size:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Sets the receiver's size to the point specified by the arguments.
  * <p>
@@ -147,6 +146,7 @@ extern class CoolItem extends org.eclipse.swt.widgets.Item
  * </ul>
  */
 	public function setSize(width:Int,height:Int):Void;
+	@:overload(function (size:org.eclipse.swt.graphics.Point):Void {})
 	override public function dispose():Void;
 /**
  * Returns the receiver's parent, which must be a <code>CoolBar</code>.
@@ -207,7 +207,6 @@ extern class CoolItem extends org.eclipse.swt.widgets.Item
  * 
  * @since 2.0
  */
-	@:overload(function (size:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Sets the minimum size that the cool item can be resized to
  * using the cool item's gripper, to the point specified by the arguments.
@@ -223,6 +222,7 @@ extern class CoolItem extends org.eclipse.swt.widgets.Item
  * @since 2.0
  */
 	public function setMinimumSize(width:Int,height:Int):Void;
+	@:overload(function (size:org.eclipse.swt.graphics.Point):Void {})
 /**
  * Returns the preferred size of the receiver.
  * <p>
