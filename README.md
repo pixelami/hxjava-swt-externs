@@ -72,3 +72,17 @@ Current Status
 
 Not all extern classes currently compile. The Simple example above does compile.
 
+
+The following errors remain when compiling AllThings.hx (as produced by java-haxe-extern-creator https://github.com/pixelami/java-haxe-extern-creator)
+
+/Users/a/dev/lib/swt-4.2-cocoa-macosx-x86_64/swt-4.2-extern/org/eclipse/swt/dnd/DropTargetEvent.hx:68: characters 8-58 : Class not found : org.eclipse.swt.dnd.DNDEvent
+/Users/a/dev/lib/swt-4.2-cocoa-macosx-x86_64/swt-4.2-extern/org/eclipse/swt/widgets/Canvas.hx:138: characters 8-102 : Field drawBackground should be declared with 'override' since it is inherited from superclass
+/Users/a/dev/lib/swt-4.2-cocoa-macosx-x86_64/swt-4.2-extern/org/eclipse/swt/widgets/Canvas.hx:138: characters 8-102 : Field drawBackground overload parent class with different or incomplete type
+/Users/a/dev/lib/swt-4.2-cocoa-macosx-x86_64/swt-4.2-extern/org/eclipse/swt/widgets/Canvas.hx:138: characters 8-102 : gc : org.eclipse.swt.graphics.GC -> x : Int -> y : Int -> width : Int -> height : Int -> Void should be gc : org.eclipse.swt.graphics.GC -> x : Int -> y : Int -> width : Int -> height : Int -> offsetX : Int -> offsetY : Int -> Void
+/Users/a/dev/lib/swt-4.2-cocoa-macosx-x86_64/swt-4.2-extern/org/eclipse/swt/internal/cocoa/NSText.hx:21: characters 8-69 : Field copy should be declared with 'override' since it is inherited from superclass
+/Users/a/dev/lib/swt-4.2-cocoa-macosx-x86_64/swt-4.2-extern/org/eclipse/swt/internal/cocoa/NSText.hx:21: characters 8-69 : Field copy overload parent class with different or incomplete type
+/Users/a/dev/lib/swt-4.2-cocoa-macosx-x86_64/swt-4.2-extern/org/eclipse/swt/internal/cocoa/NSText.hx:21: characters 8-69 : sender : org.eclipse.swt.internal.cocoa.Id -> Void should be Void -> org.eclipse.swt.internal.cocoa.Id
+/Users/a/dev/lib/swt-4.2-cocoa-macosx-x86_64/swt-4.2-extern/org/eclipse/swt/custom/TableTreeEditor.hx:87: characters 8-125 : Field setEditor should be declared with 'override' since it is inherited from superclass
+/Users/a/dev/lib/swt-4.2-cocoa-macosx-x86_64/swt-4.2-extern/org/eclipse/swt/custom/TableTreeEditor.hx:87: characters 8-125 : Field setEditor overload parent class with different or incomplete type
+/Users/a/dev/lib/swt-4.2-cocoa-macosx-x86_64/swt-4.2-extern/org/eclipse/swt/custom/TableTreeEditor.hx:87: characters 8-125 : editor : org.eclipse.swt.widgets.Control -> item : org.eclipse.swt.custom.TableTreeItem -> column : Int -> Void should be editor : org.eclipse.swt.widgets.Control -> Void
+
