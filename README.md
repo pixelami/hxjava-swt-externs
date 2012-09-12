@@ -1,5 +1,5 @@
 #hxjava-swt-externs
-Haxe externs for the Standard Widget Toolkit (SWT) Java library (for macosx-cocoa-x86_64)
+Haxe externs for the Standard Widget Toolkit (SWT) Java library (for **macosx-cocoa-x86_64**)
 
 ###Resources
 **SWT Site**
@@ -12,10 +12,15 @@ http://download.eclipse.org/eclipse/downloads/drops4/R-4.2-201206081400/
 Haxe 2.10 (and above) http://haxe.org/download
 hxjava (can be installed with 'haxelib install hxjava')
 
+**Limitiations**
+Currently these externs are generated from the SWT macosx-cocoa-x86_64 source.
+If I get the time I may generate externs for linux and windows too. 
+If you want to generate externs for those platforms then you can try using this fork of **java-haxe-extern-creator** https://github.com/pixelami/java-haxe-extern-creator
+and download the SWT libs from eclipse.org (see link below).
 
 ###Usage
 
-Download the SWT lib from
+Download the SWT lib from 
 
 http://download.eclipse.org/eclipse/downloads/drops4/R-4.2-201206081400/download.php?dropFile=swt-4.2-cocoa-macosx-x86_64.zip
 
