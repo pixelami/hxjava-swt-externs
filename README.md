@@ -16,6 +16,7 @@ hxjava (can be installed with 'haxelib install hxjava')
 ###Usage
 
 Download the SWT lib from
+
 http://download.eclipse.org/eclipse/downloads/drops4/R-4.2-201206081400/download.php?dropFile=swt-4.2-cocoa-macosx-x86_64.zip
 
 Create a Haxe project and add the **hxjava-swt-externs** to your project's classpath.
@@ -31,6 +32,7 @@ e.g.
 The compiled jar can then be run using the java command
 e.g.
 ```java -cp "/path/to/swt-4.2-cocoa-macosx-x86_64/swt.jar:." -XstartOnFirstThread haxe.root.Test```
+
 (make sure you run this command from the root folder where the .class files were generated)
 
 
