@@ -1,18 +1,19 @@
+#hxjava-swt-externs
 Haxe externs for the Standard Widget Toolkit (SWT) Java library (for macosx-cocoa-x86_64)
 
-
-SWT Site
+###Resources
+**SWT Site**
 http://www.eclipse.org/swt/
 
-Current Source Version 4.2.0
+**Current Source Version 4.2.0**
 http://download.eclipse.org/eclipse/downloads/drops4/R-4.2-201206081400/
 
-Requires 
+**Requires** 
 Haxe 2.10 (and above) http://haxe.org/download
 hxjava (can be installed with 'haxelib install hxjava')
 
 
-Usage
+###Usage
 
 Download the SWT lib from http://download.eclipse.org/eclipse/downloads/drops4/R-4.2-201206081400/download.php?dropFile=swt-4.2-cocoa-macosx-x86_64.zip
 Create a Haxe project and add the hxjava-swt-externs to your project's classpath.
@@ -21,16 +22,16 @@ Compile the Haxe source using -D no-compilation flag.
 This will generate a folder containg the generated java sources.
 These can be compiled using javac
 e.g. 
-javac -classpath "/path/to/swt-4.2-cocoa-macosx-x86_64/swt.jar:." -sourcepath Test.java/src -d bin Test.java/src/haxe/root/Test.java
+```javac -classpath "/path/to/swt-4.2-cocoa-macosx-x86_64/swt.jar:." -sourcepath Test.java/src -d bin Test.java/src/haxe/root/Test.java```
 
 The compiled jar can then be run using the java command
 e.g.
-java -cp "/path/to/swt-4.2-cocoa-macosx-x86_64/swt.jar:." -XstartOnFirstThread haxe.root.Test
+```java -cp "/path/to/swt-4.2-cocoa-macosx-x86_64/swt.jar:." -XstartOnFirstThread haxe.root.Test```
 (make sure you run this command from the root folder where the .class files were generated)
 
 
-Simple Example
-
+###Simple Example
+```
 import org.eclipse.swt.SWTError;
 import org.eclipse.swt.browser.Browser;
 import org.eclipse.swt.layout.FillLayout;
@@ -66,14 +67,15 @@ class Test
         display.dispose ();
     }
 }
+```
 
-
-Current Status
+###Current Status
 
 Not all extern classes currently compile. The Simple example above does compile.
 
 
 The following errors remain when compiling AllThings.hx (as produced by java-haxe-extern-creator https://github.com/pixelami/java-haxe-extern-creator)
+I expect to fix these by hand soon...
 
 /Users/a/dev/lib/swt-4.2-cocoa-macosx-x86_64/swt-4.2-extern/org/eclipse/swt/dnd/DropTargetEvent.hx:68: characters 8-58 : Class not found : org.eclipse.swt.dnd.DNDEvent
 /Users/a/dev/lib/swt-4.2-cocoa-macosx-x86_64/swt-4.2-extern/org/eclipse/swt/widgets/Canvas.hx:138: characters 8-102 : Field drawBackground should be declared with 'override' since it is inherited from superclass
